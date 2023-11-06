@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/lzq123/ISE_file/counter/ALU.xst" -ofn "D:/lzq123/ISE_file/counter/ALU.syr" 
+vhdtdtfi -lang verilog -prj counter -o D:/lzq123/ISE_file/counter/ALU.tfi -lib work D:/lzq123/ISE_file/counter//ALU.v -module ALU -template D:/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

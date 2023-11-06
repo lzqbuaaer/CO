@@ -1,0 +1,3 @@
+verilog isim_temp "cpu_checker_improve.v"
+verilog isim_temp "cpu_tb.v"
+verilog isim_temp "D:/14.7/ISE_DS/ISE//verilog/src/glbl.v"

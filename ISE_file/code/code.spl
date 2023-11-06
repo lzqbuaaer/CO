@@ -1,0 +1,12 @@
+[Inputs]
+Clk
+Reset
+Slt
+En
+[Outputs]
+=Output0[63:0]=
+=Output1[63:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel code
+

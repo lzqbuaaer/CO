@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "D:/lzq123/ISE_file/counter/counter.xst" -ofn "D:/lzq123/ISE_file/counter/counter.syr" 
+xst -intstyle ise -ifn "D:/lzq123/ISE_file/counter/counter.xst" -ofn "D:/lzq123/ISE_file/counter/counter.syr" 
+xst -intstyle ise -ifn "D:/lzq123/ISE_file/counter/counter.xst" -ofn "D:/lzq123/ISE_file/counter/counter.syr" 
+vhdtdtfi -lib work D:/lzq123/ISE_file/counter/counter.v -lang verilog -prj counter -o counter.spl -module counter -template D:/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family aspartan3 counter.spl D:/lzq123/ISE_file/counter/counter.sym 
+xst -intstyle ise -ifn "D:/lzq123/ISE_file/counter/counter.xst" -ofn "D:/lzq123/ISE_file/counter/counter.syr" 

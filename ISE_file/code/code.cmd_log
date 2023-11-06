@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/lzq123/ISE_file/code/code.v -lang verilog -prj code -o code.spl -module code -template D:/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family aspartan3 code.spl D:/lzq123/ISE_file/code/code.sym 

@@ -1,0 +1,5 @@
+set -tmpdir "D:/lzq123/ISE_file/cpu_checker/xst/projnav.tmp"
+set -xsthdpdir "D:/lzq123/ISE_file/cpu_checker/xst"
+elaborate
+-ifn cpu_checker.prj
+-ifmt mixed

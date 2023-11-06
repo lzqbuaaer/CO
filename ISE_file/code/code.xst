@@ -1,0 +1,5 @@
+set -tmpdir "D:/lzq123/co/ISE_file/code/xst/projnav.tmp"
+set -xsthdpdir "D:/lzq123/co/ISE_file/code/xst"
+elaborate
+-ifn code.prj
+-ifmt mixed
