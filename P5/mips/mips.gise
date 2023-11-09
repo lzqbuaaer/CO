@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="mips.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name=".prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name=".stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name=".xst"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="alu.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="alu.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="alu.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cmp.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="cmp.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="cmp.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="de_reg.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="de_reg.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="de_reg.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="dm.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="dm.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="dm.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="em_reg.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="em_reg.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="em_reg.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ext.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ext.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ext.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="fd_reg.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="fd_reg.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="fd_reg.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="grf.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="grf.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="grf.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="im.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="im.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="im.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mw_reg.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mw_reg.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="mw_reg.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="npc.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="npc.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="npc.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="pc.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="pc.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="pc.xst"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1699532718" xil_pn:name="TRANEXT_compLibraries_FPGA" xil_pn:prop_ck="1321705353062746806" xil_pn:start_ts="1699532718">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>
