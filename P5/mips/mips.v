@@ -44,6 +44,7 @@ module mips(
     wire [31:0] D_rt;
     //EXT
     wire [31:0] D_EXT32;
+    wire D_EXTOp;
     //CMP
     wire D_B_JP;
     //DE_REG
@@ -77,12 +78,41 @@ module mips(
     wire [31:0] W_ALUO;
     wire [31:0] W_PC8;
     //GRF_W
-    // wire [1:0] RFA3Sel;
-    // wire [1:0] RFWDSel;
-    wire [4:0] W_RFA3
+    wire [4:0] W_RFA3;
     wire [31:0] W_RFWD;
     wire W_RFWr;
+    //D_CTRL
+    //E_CTRL
+    wire E_ALUBSel;
+    assign E_ALUB = (E_ALUBSel == `ALUB_RT) ? E_rt :E_EXT32;
+    //M_CTRL
+    //W_CTRL
+    wire [1:0] W_RFA3Sel;
+    assign W_RFA3 = (W_RFA3Sel == `RFA3_RA) ? 5'b11111 :
+                    (W_RFA3Sel == `RFA3_RD) ? W_IR[15:11] : W_IR[20:16];
+    wire [1:0] W_RFWDSel;
+    assign W_RFWD = (W_RFWDSel == `RFWD_PC8) ? W_PC8 :
+                    (W_RFWDSel == `RFWD_DM) ? W_DMWD : W_ALUO;
 
+    control D_CTRL(
+        .IR(D_IR),
+        .NPCOp(D_NPCOp),
+        .EXTOp(D_EXTOp)
+    );
+    control E_CTRL(
+        .IR(E_IR),
+        .ALUBSel(E_ALUBSel),
+        .ALUOp(E_ALUOp)
+    );
+    control M_CTRL(
+        .IR(M_IR),
+        .DMWr(M_DMWr)
+    );
+    control W_CTL(
+        .IR(W_IR),
+        .RFA3Sel(W_RFA3Sel),
+        .RFWDSel(W_RFWDSel)
+    );
     pc PC(
         .NPC(F_NPC),
         .clk(clk),
@@ -127,7 +157,8 @@ module mips(
     );
     ext EXT(
         .in(D_IR[15:0]),
-        .out(D_EXT32)
+        .out(D_EXT32),
+        .EXTOp(D_EXTOp)
     );
     cmp CMP(
         .rs(D_rs),

@@ -44,6 +44,8 @@ Parsing module <pc>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\npc.v" into library work
 Parsing verilog file "head.v" included at line 21.
 Parsing module <npc>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\mw_reg.v" into library work
+Parsing module <mw_reg>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\im.v" into library work
 Parsing module <im>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\grf.v" into library work
@@ -53,17 +55,27 @@ Parsing module <fd_reg>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\ext.v" into library work
 Parsing verilog file "head.v" included at line 21.
 Parsing module <ext>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\em_reg.v" into library work
+Parsing module <em_reg>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\dm.v" into library work
+Parsing module <dm>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\de_reg.v" into library work
 Parsing module <de_reg>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\control.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <control>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\cmp.v" into library work
 Parsing module <cmp>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\alu.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <alu>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\mips.v" into library work
 Parsing verilog file "head.v" included at line 21.
 Parsing module <mips>.
 
 
 Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 1.95 secs
+Total CPU time to Xst completion: 1.91 secs
  
 --> 
 
