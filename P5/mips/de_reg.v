@@ -31,8 +31,8 @@ module de_reg(
     output reg [31:0] E_rt,
     input [31:0] D_EXT,
     output reg [31:0] E_EXT,
-	 input [31:0] D_PC8,
-	 output reg [31:0] E_PC8
+    input [31:0] D_PC8,
+    output reg [31:0] E_PC8
     );
 
     always @(posedge clk ) begin
@@ -42,7 +42,7 @@ module de_reg(
             E_rs <= 32'b0;
             E_rt <= 32'b0;
             E_EXT <= 32'b0;
-				E_PC8 <= 32'b0;
+			E_PC8 <= 32'b0;
         end
         else begin
             E_PC <= D_PC;
@@ -50,7 +50,7 @@ module de_reg(
             E_rs <= D_rs;
             E_rt <= D_rt;
             E_EXT <= D_EXT;
-				E_PC8 <= D_PC8;
+			E_PC8 <= D_PC8;
         end
     end
 

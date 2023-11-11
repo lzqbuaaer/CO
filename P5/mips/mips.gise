@@ -62,6 +62,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="im.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="im.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="im.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mips.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mips.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="mips.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mw_reg.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mw_reg.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="mw_reg.xst"/>

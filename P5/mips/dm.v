@@ -27,7 +27,7 @@ module dm(
     input rst,
     output [31:0] RD
     );
-	 integer i;
+    integer i;
     reg [31:0] dm [0:3071]; 
     always @(posedge clk ) begin
         if(rst == 1) begin
