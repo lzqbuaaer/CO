@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to D:/lzq123/co/P5/mips/xst
 
@@ -39,6 +39,9 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "D:\lzq123\co\P5\mips\decode.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <decode>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\pc.v" into library work
 Parsing module <pc>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\npc.v" into library work
@@ -64,6 +67,9 @@ Parsing module <de_reg>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\control.v" into library work
 Parsing verilog file "head.v" included at line 21.
 Parsing module <control>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\conflict.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <conflict>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\cmp.v" into library work
 Parsing module <cmp>.
 Analyzing Verilog file "D:\lzq123\co\P5\mips\alu.v" into library work
@@ -75,7 +81,7 @@ Parsing module <mips>.
 
 
 Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 1.91 secs
+Total CPU time to Xst completion: 1.94 secs
  
 --> 
 

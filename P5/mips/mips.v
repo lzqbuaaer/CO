@@ -93,6 +93,34 @@ module mips(
     wire [1:0] W_RFWDSel;
     assign W_RFWD = (W_RFWDSel == `RFWD_PC8) ? W_PC8 :
                     (W_RFWDSel == `RFWD_DM) ? W_DMWD : W_ALUO;
+    
+    //Stall
+    wire Stall;
+    assign F_PC_en = Stall;
+    assign FD_en = Stall;
+    assign DE_rst = (Stall | reset);
+
+    //forward
+    wire [31:0] W_FD = W_DMWD;
+    wire [31:0] M_FD = (M_IR[31:26] == 6'b000011) ? M_PC8 : M_ALUO;
+    wire [31:0] E_FD = E_PC8;
+    wire [1:0] FWSel_D_rs;
+    wire [1:0] FWSel_D_rt;
+    wire [1:0] FWSel_E_rs;
+    wire [1:0] FWSel_E_rt;
+    wire [1:0] FWSel_M_rt;
+    assign M_rt = (FWSel_M_rt == 1) ? W_FD : M_REG_rt;
+    assign E_rs = (FWSel_E_rs == 2) ? M_FD :
+                  (FWSel_E_rs == 1) ? W_FD : E_REG_rs;
+    assign E_rt = (FWSel_E_rt == 2) ? M_FD :
+                  (FWSel_E_rt == 1) ? W_FD : E_REG_rt;
+    assign D_rs = (FWSel_D_rs == 3) ? E_FD : 
+                  (FWSel_D_rs == 2) ? M_FD :
+                  (FWSel_D_rs == 1) ? W_FD : D_RF_rs;
+    assign D_rt = (FWSel_D_rt == 3) ? E_FD : 
+                  (FWSel_D_rt == 2) ? M_FD :
+                  (FWSel_D_rt == 1) ? W_FD : D_RF_rt;
+
 
     control D_CTRL(
         .IR(D_IR),
@@ -112,6 +140,18 @@ module mips(
         .IR(W_IR),
         .RFA3Sel(W_RFA3Sel),
         .RFWDSel(W_RFWDSel)
+    );
+    conflict Conflict(
+        .D_IR(D_IR),
+        .E_IR(E_IR),
+        .M_IR(M_IR),
+        .W_IR(W_IR),
+        .Stall(Stall),
+        .FW_D_rs(FWSel_D_rs),
+        .FW_D_rt(FWSel_D_rt),
+        .FW_E_rs(FWSel_E_rs),
+        .FW_E_rt(FWSel_E_rt),
+        .FW_M_rt(FWSel_M_rt)
     );
     pc PC(
         .NPC(F_NPC),

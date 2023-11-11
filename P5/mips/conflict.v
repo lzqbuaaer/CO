@@ -85,25 +85,25 @@ module conflict(
 
     wire W_FW_E_rs = (W_Tnew == 0) && (W_A3 == E_A1) && (E_A1 != 0);
     wire M_FW_E_rs = (M_Tnew == 0) && (M_A3 == E_A1) && (E_A1 != 0);
-    assign [1:0] FW_E_rs = M_FW_E_rs ? 2'd2 :
+    assign FW_E_rs = M_FW_E_rs ? 2'd2 :
                          W_FW_E_rs ? 2'd1 : 2'd0;
     
     wire W_FW_E_rt = (W_Tnew == 0) && (W_A3 == E_A2) && (E_A2 != 0);
     wire M_FW_E_rt = (M_Tnew == 0) && (M_A3 == E_A2) && (E_A2 != 0);
-    assign [1:0] FW_E_rt = M_FW_E_rt ? 2'd2 :
+    assign FW_E_rt = M_FW_E_rt ? 2'd2 :
                          W_FW_E_rt ? 2'd1 : 2'd0;
     
     wire W_FW_D_rs = (W_Tnew == 0) && (W_A3 == D_A1) && (D_A1 != 0);
     wire M_FW_D_rs = (M_Tnew == 0) && (M_A3 == D_A1) && (D_A1 != 0);
     wire E_FW_D_rs = (E_Tnew == 0) && (M_A3 == D_A1) && (D_A1 != 0);
-    assign [1:0] FW_D_rs = E_FW_D_rs ? 2'd3 :
+    assign FW_D_rs = E_FW_D_rs ? 2'd3 :
                          M_FW_D_rs ? 2'd2 :
                          W_FW_D_rs ? 2'd1 : 2'd0;
 
     wire W_FW_D_rt = (W_Tnew == 0) && (W_A3 == D_A2) && (D_A2 != 0);
     wire M_FW_D_rt = (M_Tnew == 0) && (M_A3 == D_A2) && (D_A2 != 0);
     wire E_FW_D_rt = (E_Tnew == 0) && (M_A3 == D_A2) && (D_A2 != 0);
-    assign [1:0] FW_D_rt = E_FW_D_rt ? 2'd3 :
+    assign FW_D_rt = E_FW_D_rt ? 2'd3 :
                          M_FW_D_rt ? 2'd2 :
                          W_FW_D_rt ? 2'd1 : 2'd0;
 
