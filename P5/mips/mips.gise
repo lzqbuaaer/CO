@@ -32,9 +32,18 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cmp.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="cmp.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="cmp.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="conflict.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="conflict.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="conflict.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="control.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="control.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="control.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="de_reg.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="de_reg.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="de_reg.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="decode.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="decode.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="decode.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="dm.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="dm.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="dm.xst"/>

@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to D:/lzq123/co/P5/mips/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.08 secs
  
---> Reading design: em_reg.prj
+--> Reading design: decode.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -39,12 +39,13 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\lzq123\co\P5\mips\em_reg.v" into library work
-Parsing module <em_reg>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\decode.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <decode>.
 
 
 Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.37 secs
+Total CPU time to Xst completion: 1.89 secs
  
 --> 
 

@@ -24,12 +24,12 @@ module em_reg(
     input [31:0] E_PC,
     input [31:0] E_IR,
     input [31:0] E_ALUO,
-    input [31:0] E_rs,
+    input [31:0] E_PC8,
     input [31:0] E_rt,
     output reg [31:0] M_PC,
     output reg [31:0] M_IR,
     output reg [31:0] M_ALUO,
-    output reg [31:0] M_rs,
+    output reg [31:0] M_PC8,
     output reg [31:0] M_rt
     );
     always @(posedge clk ) begin
@@ -37,14 +37,14 @@ module em_reg(
             M_PC <= 32'b0;
             M_IR <= 32'b0;
             M_ALUO <= 32'b0;
-            M_rs <= 32'b0;
+            M_PC8 <= 32'b0;
             M_rt <= 32'b0;
         end
         else begin
             M_PC <= E_PC;
             M_IR <= E_IR;
             M_ALUO <= E_ALUO;
-            M_rs <= E_rs;
+            M_PC8 <= E_PC8;
             M_rt <= E_rt;
         end
     end

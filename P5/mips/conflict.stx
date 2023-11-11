@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to D:/lzq123/co/P5/mips/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.10 secs
  
---> Reading design: em_reg.prj
+--> Reading design: conflict.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -39,18 +39,24 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\lzq123\co\P5\mips\em_reg.v" into library work
-Parsing module <em_reg>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\decode.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <decode>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\conflict.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <conflict>.
+WARNING:HDLCompiler:751 - "D:\lzq123\co\P5\mips\conflict.v" Line 76: Redeclaration of ansi port Stall is not allowed
+WARNING:HDLCompiler:489 - "D:\lzq123\co\P5\mips\conflict.v" Line 27: Illegal initial value of output port Stall for module conflict ignored
 
 
 Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.37 secs
+Total CPU time to Xst completion: 1.94 secs
  
 --> 
 
 Total memory usage is 4463456 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
