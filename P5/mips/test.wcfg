@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="3" />
    <wvobject fp_name="/tb/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -19,50 +19,9 @@
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/uut/PC/PC" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   <wvobject fp_name="/tb/uut/IM/IR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">IR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IR[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/uut/NPC/F_PC" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">F_PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">F_PC[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/uut/NPC/PC" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/uut/NPC/B_JP" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">B_JP</obj_property>
-      <obj_property name="ObjectShortName">B_JP</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/uut/NPC/NPCOp" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">NPCOp[2:0]</obj_property>
-      <obj_property name="ObjectShortName">NPCOp[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/uut/NPC/RSdata" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">RSdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">RSdata[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/uut/NPC/IR26" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">IR26[25:0]</obj_property>
-      <obj_property name="ObjectShortName">IR26[25:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/uut/NPC/NPC" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">NPC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">NPC[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/uut/NPC/PC8" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">PC8[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC8[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/uut/D_IR" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">D_IR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">D_IR[31:0]</obj_property>
    </wvobject>
 </wave_config>

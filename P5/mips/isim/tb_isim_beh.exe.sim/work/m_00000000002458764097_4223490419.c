@@ -8117,7 +8117,7 @@ LAB10:    t27 = (t20 + 4);
     *((unsigned int *)t27) = 1;
     goto LAB11;
 
-LAB12:    t32 = (t0 + 4408U);
+LAB12:    t32 = (t0 + 3768U);
     t33 = *((char **)t32);
     t32 = (t0 + 2808U);
     t34 = *((char **)t32);
