@@ -102,7 +102,7 @@ module conflict(
 
     wire W_FW_D_rt = (W_Tnew == 0) && (W_A3 == D_A2) && (D_A2 != 0);
     wire M_FW_D_rt = (M_Tnew == 0) && (M_A3 == D_A2) && (D_A2 != 0);
-    wire E_FW_D_rt = (E_Tnew == 0) && (M_A3 == D_A2) && (D_A2 != 0);
+    wire E_FW_D_rt = (E_Tnew == 0) && (E_A3 == D_A2) && (D_A2 != 0);
     assign FW_D_rt = E_FW_D_rt ? 2'd3 :
                          M_FW_D_rt ? 2'd2 :
                          W_FW_D_rt ? 2'd1 : 2'd0;

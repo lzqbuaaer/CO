@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>P5document.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="p5verilog%E4%BA%94%E7%BA%A7%E6%B5%81%E6%B0%B4%E7%BA%BFcpu">P5:Verilog五级流水线CPU</h1>
+<h2 id="%E6%95%B4%E4%BD%93%E5%8A%9F%E8%83%BD">整体功能</h2>
+<ul>
+<li>Verilog五级流水线CPU</li>
+<li>支持<code>add,sub,ori,lui,sw,lw,beq,jal,jr</code>指令，<code>add,sub</code>不考虑溢出</li>
+<li>跳转指令使用延迟槽</li>
+<li>指令冲突优先进行转发，再考虑阻塞</li>
+<li>两个输入<code>clk</code>和<code>reset</code>。<br>
+简略设计图纸：
+<img src="p5cpu.jpg" alt="cpu_img"></li>
+</ul>
+<h2 id="%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF">数据通路</h2>
+<h3 id="1fpc">1.F_PC</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">clk</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">时钟</td>
+</tr>
+<tr>
+<td style="text-align:center">rst</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">复位</td>
+</tr>
+<tr>
+<td style="text-align:center">_en</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">使能，1为冻结</td>
+</tr>
+<tr>
+<td style="text-align:center">NPC[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">NPC</td>
+</tr>
+<tr>
+<td style="text-align:center">PC[31:0]</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">PC</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2fim">2.F_IM</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">PC</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">指令地址</td>
+</tr>
+<tr>
+<td style="text-align:center">IR</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">指令</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3fdreg">3.FD_REG</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">clk</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">rst</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">_en</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">F_PC[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">F_IR[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">D_PC[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">D_IR[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4fdnpc">4.FD_NPC</h3>
+<ul>
+<li>NPC模块有F和D的输入和输出</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">F_PC</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">F级当前指令地址</td>
+</tr>
+<tr>
+<td style="text-align:center">PC</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">D级当前指令地址</td>
+</tr>
+<tr>
+<td style="text-align:center">B_JP</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center"><code>beq</code>指令跳转信号</td>
+</tr>
+<tr>
+<td style="text-align:center">NPCOp[2:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">控制信号</td>
+</tr>
+<tr>
+<td style="text-align:center">RSData[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">GRF_rs的值</td>
+</tr>
+<tr>
+<td style="text-align:center">IR26[25:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">IR低26位</td>
+</tr>
+<tr>
+<td style="text-align:center">NPC[31:0]</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">向F_PC的输出</td>
+</tr>
+<tr>
+<td style="text-align:center">PC8[31:0]</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center"><code>jal</code>中参与流水，存入<code>$ra</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">NPCOp</th>
+<th style="text-align:center">NPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>JR</code></td>
+<td style="text-align:center"><code>RSData</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>JAL</code></td>
+<td style="text-align:center"><code>{PC[31:28] , IR26 , 2'b0}</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>BEQ &amp;&amp; B_JP</code></td>
+<td style="text-align:center"><code>{{14{IR26[15]}} , IR26[15:0] , 2'b0} + PC + 4</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>other</code></td>
+<td style="text-align:center"><code>F_PC + 4</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="5dwgrf">5.DW_GRF</h3>
+<ul>
+<li>GRF在D级和W级分别承担读取和写入的功能</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">clk</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">时钟</td>
+</tr>
+<tr>
+<td style="text-align:center">rst</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">复位</td>
+</tr>
+<tr>
+<td style="text-align:center">A1[4:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">D级</td>
+</tr>
+<tr>
+<td style="text-align:center">A2[4:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">D级</td>
+</tr>
+<tr>
+<td style="text-align:center">RD1[31:0]</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">D级</td>
+</tr>
+<tr>
+<td style="text-align:center">RD2[31:0]</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">D级</td>
+</tr>
+<tr>
+<td style="text-align:center">pc[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">W级</td>
+</tr>
+<tr>
+<td style="text-align:center">RFWr</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">W级</td>
+</tr>
+<tr>
+<td style="text-align:center">A3[4:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">W级</td>
+</tr>
+<tr>
+<td style="text-align:center">WD[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">W级</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6dext">6.D_EXT</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">in[15:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">IR低16位</td>
+</tr>
+<tr>
+<td style="text-align:center">out[31:0]</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">32位扩展立即数</td>
+</tr>
+<tr>
+<td style="text-align:center">EXTOp</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center"><code>zero_ext</code>和<code>sign_ext</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="7dcmp">7.D_CMP</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">rs[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">GRF_rs</td>
+</tr>
+<tr>
+<td style="text-align:center">rt[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">GRF_rt</td>
+</tr>
+<tr>
+<td style="text-align:center">jump</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center"><code>beq</code>跳转信号</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8dereg">8.DE_REG</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">clk</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">rst</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">D_PC[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">D_IR[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">D_rs[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">D_rt[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">D_EXT[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">D_PC8[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">E_PC[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">E_IR[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">E_rs[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">E_rt[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">E_EXT[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">E_PC8[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9ealu">9.E_ALU</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">/</td>
+</tr>
+<tr>
+<td style="text-align:center">B[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">/</td>
+</tr>
+<tr>
+<td style="text-align:center">C[31:0]</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">/</td>
+</tr>
+<tr>
+<td style="text-align:center">ALUOp[2:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">控制信号</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ALUOp</th>
+<th style="text-align:center">C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>ADD</code></td>
+<td style="text-align:center"><code>A + B</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SUB</code></td>
+<td style="text-align:center"><code>A - B</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ORI</code></td>
+<td style="text-align:center"><code>A \| B</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>LUI</code></td>
+<td style="text-align:center"><code>{B[15:0] , 16'b0}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="10emreg">10.EM_REG</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">clk</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">rst</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">E_PC[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">E_IR[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">E_rt[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">E_PC8[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">E_ALUO[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">M_PC[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">M_IR[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">M_rt[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">M_PC8[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">M_ALUO[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+</tbody>
+</table>
+<h3 id="11mdm">11.M_DM</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">clk</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">时钟</td>
+</tr>
+<tr>
+<td style="text-align:center">rst</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">复位</td>
+</tr>
+<tr>
+<td style="text-align:center">pc[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">写入DM的指令地址</td>
+</tr>
+<tr>
+<td style="text-align:center">addr[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">写入/读取地址</td>
+</tr>
+<tr>
+<td style="text-align:center">WD[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">写入数据</td>
+</tr>
+<tr>
+<td style="text-align:center">DMWr</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">写入使能</td>
+</tr>
+<tr>
+<td style="text-align:center">RD[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">读出数据</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12mwreg">12.MW_REG</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">clk</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">rst</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">M_PC[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">M_IR[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">M_PC8[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">M_ALUO[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">M_DMRD[31:0]</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">W_PC[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">W_IR[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">W_PC8[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">W_ALUO[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">W_DMRD[31:0]</td>
+<td style="text-align:center">output</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E8%AF%91%E7%A0%81%E5%99%A8">译码器</h2>
+<ul>
+<li>设计采用分布式译码，分别在D、E、M、W级设置控制器，输入指令，每一级输出不同的控制信号。</li>
+</ul>
+<h3 id="control">Control</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">IR[31:0]</td>
+<td style="text-align:center">input</td>
+<td style="text-align:center">指令</td>
+</tr>
+<tr>
+<td style="text-align:center">NPCOp[2:0]</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">D级</td>
+</tr>
+<tr>
+<td style="text-align:center">RFWr</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">W级</td>
+</tr>
+<tr>
+<td style="text-align:center">EXTOp</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">D级</td>
+</tr>
+<tr>
+<td style="text-align:center">ALUBSel</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">E级</td>
+</tr>
+<tr>
+<td style="text-align:center">ALUOp</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">E级</td>
+</tr>
+<tr>
+<td style="text-align:center">DMWr</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">M级</td>
+</tr>
+<tr>
+<td style="text-align:center">RFA3Sel</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">W级</td>
+</tr>
+<tr>
+<td style="text-align:center">RFWDSel</td>
+<td style="text-align:center">output</td>
+<td style="text-align:center">W级</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%86%92%E9%99%A9">流水线冒险</h2>
+<ul>
+<li>解决冒险的方法有阻塞和转发两种，选择方法是分别计算两个级的指令的${T}<em>{use}$和${T}</em>{new}$，如果${T}<em>{new}$&gt;${T}</em>{use}$，则必须阻塞，否则可以使用转发来解决。</li>
+</ul>
+<h3 id="%E9%98%BB%E5%A1%9E">阻塞</h3>
+<ul>
+<li>阻塞只会发生在D级，涉及D级与M级和D级与E级之间的冒险。</li>
+</ul>
+<pre class="hljs"><code><div>    <span class="hljs-comment">//block</span>
+    <span class="hljs-keyword">wire</span> M_stall_rs = (M_Tnew &gt; D_rs_Tuse) &amp;&amp; (D_A1 == M_A3) &amp;&amp; (D_A1 != <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">wire</span> M_stall_rt = (M_Tnew &gt; D_rt_Tuse) &amp;&amp; (D_A2 == M_A3) &amp;&amp; (D_A2 != <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">wire</span> E_stall_rs = (E_Tnew &gt; D_rs_Tuse) &amp;&amp; (D_A1 == E_A3) &amp;&amp; (D_A1 != <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">wire</span> E_stall_rt = (E_Tnew &gt; D_rt_Tuse) &amp;&amp; (D_A2 == E_A3) &amp;&amp; (D_A2 != <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">assign</span> Stall = M_stall_rs | M_stall_rt | E_stall_rs | E_stall_rt;
+</div></code></pre>
+<h3 id="%E8%BD%AC%E5%8F%91">转发</h3>
+<ul>
+<li>首先搞清楚转发的供给者和需求者都在数据通路的哪一个部分
+<ul>
+<li>供给者：<code>E_PC8</code>，<code>M_PC8</code>，<code>M_ALUO</code>，<code>W_RFWD</code></li>
+<li>需求者：<code>D_rs</code>，<code>D_rt</code>，<code>E_rs</code>，<code>E_rt</code>，<code>M_rt</code></li>
+</ul>
+</li>
+<li>每一级的接收者都会接收来自后面级别的转发，注意GRF的内部转发</li>
+<li>转发优先接收最新鲜，也就是最近一级的数据</li>
+<li>只有当${T}_{new}$为0时，也就是产生新数据的时候才能转发<br>
+以向<code>D_rs</code>的转发为例：</li>
+</ul>
+<pre class="hljs"><code><div>    <span class="hljs-keyword">wire</span> W_FW_D_rt = (W_Tnew == <span class="hljs-number">0</span>) &amp;&amp; (W_A3 == D_A2) &amp;&amp; (D_A2 != <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">wire</span> M_FW_D_rt = (M_Tnew == <span class="hljs-number">0</span>) &amp;&amp; (M_A3 == D_A2) &amp;&amp; (D_A2 != <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">wire</span> E_FW_D_rt = (E_Tnew == <span class="hljs-number">0</span>) &amp;&amp; (M_A3 == D_A2) &amp;&amp; (D_A2 != <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">assign</span> FW_D_rt = E_FW_D_rt ? <span class="hljs-number">2'd3</span> :
+                         M_FW_D_rt ? <span class="hljs-number">2'd2</span> :
+                         W_FW_D_rt ? <span class="hljs-number">2'd1</span> : <span class="hljs-number">2'd0</span>;
+</div></code></pre>
+<h4 id="conflict">Conflict</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信号名称</th>
+<th style="text-align:center">方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">D_IR</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">E_IR</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">M_IR</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">W_IR</td>
+<td style="text-align:center">input</td>
+</tr>
+<tr>
+<td style="text-align:center">Stall</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">FW_D_rs</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">FW_D_rt</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">FW_E_rs</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">FW_E_rt</td>
+<td style="text-align:center">output</td>
+</tr>
+<tr>
+<td style="text-align:center">FW_M_rt</td>
+<td style="text-align:center">output</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E6%B5%8B%E8%AF%95%E6%96%B9%E6%A1%88">测试方案</h2>
+<pre class="hljs"><code><div><span class="hljs-meta">.text</span>
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">t1</span>, $<span class="hljs-number">0</span>, <span class="hljs-number">4</span>
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">t0</span>, $<span class="hljs-number">0</span>, <span class="hljs-number">4</span>
+	<span class="hljs-keyword">sw	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">0</span>($<span class="hljs-number">0</span>)
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">t0</span>, $<span class="hljs-number">0</span>, <span class="hljs-number">8</span>
+	<span class="hljs-keyword">sw	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">4</span>($<span class="hljs-number">0</span>)
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">t0</span>, $<span class="hljs-number">0</span>, <span class="hljs-number">12</span>
+	<span class="hljs-keyword">sw	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">8</span>($<span class="hljs-number">0</span>)
+	
+	<span class="hljs-keyword">lw	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">4</span>($<span class="hljs-number">0</span>)
+	<span class="hljs-keyword">add	</span>	$<span class="hljs-built_in">t0</span>, $<span class="hljs-built_in">t0</span>, $<span class="hljs-built_in">t1</span>
+	
+	<span class="hljs-keyword">lw	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">4</span>($<span class="hljs-built_in">t0</span>)
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">8</span>
+	
+	<span class="hljs-keyword">lw	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">12</span>($<span class="hljs-built_in">v0</span>)
+	<span class="hljs-keyword">sw	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">4</span>($<span class="hljs-number">0</span>)
+	
+	<span class="hljs-keyword">lw	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">12</span>($<span class="hljs-built_in">v0</span>)
+	<span class="hljs-keyword">sw	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">0</span>($<span class="hljs-built_in">t0</span>)
+	
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">t0</span>, $<span class="hljs-built_in">v0</span>, <span class="hljs-number">4</span>
+	<span class="hljs-keyword">beq	</span>	$<span class="hljs-built_in">t0</span>, $<span class="hljs-built_in">t0</span>, Tag1
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">s1</span>, $<span class="hljs-built_in">v0</span>, <span class="hljs-number">256</span>
+<span class="hljs-symbol">
+
+Tag1:</span>
+	<span class="hljs-keyword">lui	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">100</span>
+	<span class="hljs-keyword">beq	</span>	$<span class="hljs-built_in">t0</span>, $<span class="hljs-built_in">t0</span>, Tag2
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">s1</span>, $<span class="hljs-built_in">v0</span>, <span class="hljs-number">256</span>
+<span class="hljs-symbol">	
+Tag2:</span>
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">100</span>
+	<span class="hljs-keyword">beq	</span>	$<span class="hljs-built_in">t0</span>, $<span class="hljs-built_in">t0</span>, Tag3
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">s1</span>, $<span class="hljs-built_in">v0</span>, <span class="hljs-number">256</span>
+<span class="hljs-symbol">	
+Tag3:</span>
+	<span class="hljs-keyword">lw	</span>	$<span class="hljs-built_in">t0</span>, <span class="hljs-number">4</span>($<span class="hljs-built_in">v0</span>)
+	<span class="hljs-keyword">beq	</span>	$<span class="hljs-built_in">t0</span>, $<span class="hljs-built_in">t0</span>, Tag4
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-built_in">s1</span>, $<span class="hljs-built_in">v0</span>, <span class="hljs-number">256</span>
+<span class="hljs-symbol">
+Tag4:</span>
+	<span class="hljs-keyword">jal	</span>	Tag5
+<span class="hljs-symbol">
+Tag5:</span>
+	<span class="hljs-keyword">ori	</span>	$<span class="hljs-number">31</span>, $<span class="hljs-number">0</span>, <span class="hljs-number">4</span>
+	<span class="hljs-keyword">jr	</span>	$<span class="hljs-number">31</span>
+</div></code></pre>
+<h2 id="%E6%80%9D%E8%80%83%E9%A2%98">思考题</h2>
+<p>1.我们使用提前分支判断的方法尽早产生结果来减少因不确定而带来的开销，但实际上这种方法并非总能提高效率，请从流水线冒险的角度思考其原因并给出一个指令序列的例子。</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">lw </span>$<span class="hljs-number">1</span> <span class="hljs-number">0</span>($<span class="hljs-number">3</span>)
+<span class="hljs-keyword">beq </span>$<span class="hljs-number">1</span> $<span class="hljs-number">2</span> <span class="hljs-keyword">jump
+</span></div></code></pre>
+<ul>
+<li>在这段代码中，beq指令前面有一条lw指令冲突，beq指令需要连续阻塞两个周期才能够正确执行，这种情况下，并没有减少开销。</li>
+</ul>
+<p>2.因为延迟槽的存在，对于 jal 等需要将指令地址写入寄存器的指令，要写回 PC + 8，请思考为什么这样设计？</p>
+<ul>
+<li>因为有延迟槽的设定，跳转指令无论是否跳转，后面的那一条指令都必须执行，所以回跳的地址应该写回 PC+8 ，防止指令重复执行。</li>
+</ul>
+<p>3.我们要求所有转发数据都来源于流水寄存器而不能是功能部件（如 DM、ALU），请思考为什么？</p>
+<ul>
+<li>数据传输从流水线寄存器中进行可以保证指令的执行顺序与各个阶段之间的协调，保证数据的准确性，同时也可以避免数据冒险和控制冒险的问题。当数据来源于功能部件时，可能会存在一些数据未被准确处理的情况，导致在下一个时钟上升沿时，数据可能会出现错误，这将会严重影响指令的正确执行和整个系统的稳定性。因此，为了保证数据的准确性和系统的稳定性，要求数据传输仅从流水线寄存器中进行传输。</li>
+</ul>
+<p>4.我们为什么要使用 GPR 内部转发？该如何实现？</p>
+<ul>
+<li>实现从W级到D级的转发。实现过程如下：</li>
+</ul>
+<pre class="hljs"><code><div>    <span class="hljs-comment">//Conflict</span>
+    <span class="hljs-keyword">wire</span> W_FW_D_rt = (W_Tnew == <span class="hljs-number">0</span>) &amp;&amp; (W_A3 == D_A2) &amp;&amp; (D_A2 != <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">wire</span> M_FW_D_rt = (M_Tnew == <span class="hljs-number">0</span>) &amp;&amp; (M_A3 == D_A2) &amp;&amp; (D_A2 != <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">wire</span> E_FW_D_rt = (E_Tnew == <span class="hljs-number">0</span>) &amp;&amp; (M_A3 == D_A2) &amp;&amp; (D_A2 != <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">assign</span> FW_D_rt = E_FW_D_rt ? <span class="hljs-number">2'd3</span> :
+                         M_FW_D_rt ? <span class="hljs-number">2'd2</span> :
+                         W_FW_D_rt ? <span class="hljs-number">2'd1</span> : <span class="hljs-number">2'd0</span>;
+    <span class="hljs-comment">//mips</span>
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] W_FD = W_RFWD;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] M_FD = (M_IR[<span class="hljs-number">31</span>:<span class="hljs-number">26</span>] == <span class="hljs-number">6'b000011</span>) ? M_PC8 : M_ALUO;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] E_FD = E_PC8;
+    <span class="hljs-keyword">assign</span> D_rs = (FWSel_D_rs == <span class="hljs-number">3</span>) ? E_FD : 
+                  (FWSel_D_rs == <span class="hljs-number">2</span>) ? M_FD :
+                  (FWSel_D_rs == <span class="hljs-number">1</span>) ? W_FD : D_RF_rs;
+</div></code></pre>
+<p>5.我们转发时数据的需求者和供给者可能来源于哪些位置？共有哪些转发数据通路？</p>
+<ul>
+<li>供给者：<code>E_PC8</code>，<code>M_PC8</code>，<code>M_ALUO</code>，<code>W_RFWD</code></li>
+<li>需求者：<code>D_rs</code>，<code>D_rt</code>，<code>E_rs</code>，<code>E_rt</code>，<code>M_rt</code></li>
+<li>转发数据通路：W-&gt;M, W-&gt;E, W-&gt;D, M-&gt;E, M-&gt;D, E-&gt;D</li>
+</ul>
+<p>6.在课上测试时，我们需要你现场实现新的指令，对于这些新的指令，你可能需要在原有的数据通路上做哪些扩展或修改？提示：你可以对指令进行分类，思考每一类指令可能修改或扩展哪些位置。</p>
+<ul>
+<li>b型指令：添加CMP中的比较功能，仿照beq提前判断是否跳转。</li>
+<li>j型指令：添加NPC中相应的跳转功能。</li>
+<li>计算型指令：ALU中添加相应的计算逻辑。</li>
+<li>访存型指令：ALU中添加相应计算访存地址的逻辑，DM中可能添加相应的逻辑。</li>
+</ul>
+<p>7.简要描述你的译码器架构，并思考该架构的优势以及不足。</p>
+<ul>
+<li>分布式译码：每一级都有一个CTRL，负责译出当前级所需控制信号。这种方法较为灵活，有效降低了流水级间传递的信号量，但是需要实例化多个控制器。</li>
+<li>控制信号驱动型：为每个指令定义一个 wire 型变量，使用或运算描述组合逻辑，对每个控制信号进行单独处理。这种方法在指令数量较多时适用，且代码量易于压缩，缺陷是如错添或漏添了某条指令，很难锁定出现错误的位置。</li>
+</ul>
+
+</body>
+</html>

@@ -5,5 +5,17 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P5/mips/mips.v" Line 125: Port <arg fmt="%s" index="1">RFWr</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P5/mips/mips.v" Line 130: Port <arg fmt="%s" index="1">NPCOp</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P5/mips/mips.v" Line 135: Port <arg fmt="%s" index="1">NPCOp</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P5/mips/mips.v" Line 139: Port <arg fmt="%s" index="1">NPCOp</arg> is not connected to this instance
+</msg>
+
 </messages>
 

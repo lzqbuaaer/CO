@@ -46,7 +46,8 @@ Compiling module mips
 Compiling module tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 18 Verilog Units
 Built simulation executable D:/lzq123/co/P5/mips/tb_isim_beh.exe
-Fuse Memory Usage: 31780 KB
-Fuse CPU Usage: 109 ms
+Fuse Memory Usage: 31404 KB
+Fuse CPU Usage: 155 ms
