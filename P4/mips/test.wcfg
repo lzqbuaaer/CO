@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="4" />
+   <WVObjectSize size="10" />
    <wvobject fp_name="/tb/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -19,13 +19,36 @@
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/uut/pc_wire" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">pc_wire[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_wire[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject fp_name="/tb/uut/npc/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/uut/grf/register[1]" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">[1,31:0]</obj_property>
-      <obj_property name="ObjectShortName">register[1,31:0]</obj_property>
+   <wvobject fp_name="/tb/uut/npc/imm" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">imm[25:0]</obj_property>
+      <obj_property name="ObjectShortName">imm[25:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/npc/ra" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ra[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ra[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/npc/zero" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/npc/NPCOp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">NPCOp[2:0]</obj_property>
+      <obj_property name="ObjectShortName">NPCOp[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/npc/pc4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/npc/npc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">npc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">npc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/im_wire" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">im_wire[31:0]</obj_property>
+      <obj_property name="ObjectShortName">im_wire[31:0]</obj_property>
    </wvobject>
 </wave_config>

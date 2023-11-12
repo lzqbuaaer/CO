@@ -74,7 +74,7 @@ module mips(
     //MW_REG
     wire [31:0] W_PC;
     wire [31:0] W_IR;
-    wire [31:0] W_DMWD;
+    wire [31:0] W_DMRD;
     wire [31:0] W_ALUO;
     wire [31:0] W_PC8;
     //GRF_W
@@ -92,7 +92,7 @@ module mips(
                     (W_RFA3Sel == `RFA3_RD) ? W_IR[15:11] : W_IR[20:16];
     wire [1:0] W_RFWDSel;
     assign W_RFWD = (W_RFWDSel == `RFWD_PC8) ? W_PC8 :
-                    (W_RFWDSel == `RFWD_DM) ? W_DMWD : W_ALUO;
+                    (W_RFWDSel == `RFWD_DM) ? W_DMRD : W_ALUO;
     
     //Stall
     wire Stall;
@@ -101,7 +101,7 @@ module mips(
     assign DE_rst = (Stall | reset);
 
     //forward
-    wire [31:0] W_FD = W_DMWD;
+    wire [31:0] W_FD = W_RFWD;
     wire [31:0] M_FD = (M_IR[31:26] == 6'b000011) ? M_PC8 : M_ALUO;
     wire [31:0] E_FD = E_PC8;
     wire [1:0] FWSel_D_rs;
@@ -136,10 +136,11 @@ module mips(
         .IR(M_IR),
         .DMWr(M_DMWr)
     );
-    control W_CTL(
+    control W_CTRL(
         .IR(W_IR),
         .RFA3Sel(W_RFA3Sel),
-        .RFWDSel(W_RFWDSel)
+        .RFWDSel(W_RFWDSel),
+        .RFWr(W_RFWr)
     );
     conflict Conflict(
         .D_IR(D_IR),
@@ -184,7 +185,7 @@ module mips(
         .PC8(D_PC8)
     );
     grf GRF(
-        .pc(D_PC),
+        .pc(W_PC),
         .A1(D_IR[25:21]),
         .A2(D_IR[20:16]),
         .A3(W_RFA3),
@@ -202,7 +203,7 @@ module mips(
     );
     cmp CMP(
         .rs(D_rs),
-        .rs(D_rt),
+        .rt(D_rt),
         .jump(D_B_JP)
     );
     de_reg DE_REG(
@@ -239,7 +240,7 @@ module mips(
         .M_IR(M_IR),
         .M_ALUO(M_ALUO),
         .M_PC8(M_PC8),
-        .m_rt(M_REG_rt)
+        .M_rt(M_REG_rt)
     );
     dm DM(
         .clk(clk),
@@ -255,12 +256,12 @@ module mips(
         .rst(reset),
         .M_PC(M_PC),
         .M_IR(M_IR),
-        .M_DMRD(M_DMWD),
+        .M_DMRD(M_DMRD),
         .M_ALUO(M_ALUO),
         .M_PC8(M_PC8),
         .W_PC(W_PC),
         .W_IR(W_IR),
-        .W_DMWD(W_DMWD),
+        .W_DMRD(W_DMRD),
         .W_ALUO(W_ALUO),
         .W_PC8(W_PC8)
     );

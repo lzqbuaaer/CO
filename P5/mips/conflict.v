@@ -32,21 +32,21 @@ module conflict(
     output [1:0] FW_M_rt
     );
     wire [3:0] D_intr;
-    wire [3:0] D_A1;
-    wire [3:0] D_A2;
-    wire [3:0] D_A3;
+    wire [4:0] D_A1;
+    wire [4:0] D_A2;
+    wire [4:0] D_A3;
     wire [3:0] E_intr;
-    wire [3:0] E_A1;
-    wire [3:0] E_A2;
-    wire [3:0] E_A3;
+    wire [4:0] E_A1;
+    wire [4:0] E_A2;
+    wire [4:0] E_A3;
     wire [3:0] M_intr;
-    wire [3:0] M_A1;
-    wire [3:0] M_A2;
-    wire [3:0] M_A3;
+    wire [4:0] M_A1;
+    wire [4:0] M_A2;
+    wire [4:0] M_A3;
     wire [3:0] W_intr;
-    wire [3:0] W_A1;
-    wire [3:0] W_A2;
-    wire [3:0] W_A3;
+    wire [4:0] W_A1;
+    wire [4:0] W_A2;
+    wire [4:0] W_A3;
 
     decode D_dec(.IR(D_IR),.out(D_intr),.A1(D_A1),.A2(D_A2),.A3(D_A3));
     decode E_dec(.IR(E_IR),.out(E_intr),.A1(E_A1),.A2(E_A2),.A3(E_A3));
@@ -95,7 +95,7 @@ module conflict(
     
     wire W_FW_D_rs = (W_Tnew == 0) && (W_A3 == D_A1) && (D_A1 != 0);
     wire M_FW_D_rs = (M_Tnew == 0) && (M_A3 == D_A1) && (D_A1 != 0);
-    wire E_FW_D_rs = (E_Tnew == 0) && (M_A3 == D_A1) && (D_A1 != 0);
+    wire E_FW_D_rs = (E_Tnew == 0) && (E_A3 == D_A1) && (D_A1 != 0);
     assign FW_D_rs = E_FW_D_rs ? 2'd3 :
                          M_FW_D_rs ? 2'd2 :
                          W_FW_D_rs ? 2'd1 : 2'd0;

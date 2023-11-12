@@ -32,6 +32,6 @@ module npc(
     
     assign NPC = (NPCOp == `NPC_JR) ? RSdata :
                  (NPCOp == `NPC_JAL) ? {PC[31:28] , IR26 , 2'b0} :
-                 (NPCOp == `NPC_BEQ && B_JP) ? {{14{IR26[15]}} , IR26[15:0] , 2'b0} : F_PC + 4;
+                 (NPCOp == `NPC_BEQ && B_JP) ? {{14{IR26[15]}} , IR26[15:0] , 2'b0} + PC + 4: F_PC + 4;
     assign PC8 = PC + 8;
 endmodule

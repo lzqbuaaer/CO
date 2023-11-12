@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to D:/lzq123/co/P5/mips/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: im.prj
 
@@ -43,8 +43,8 @@ Analyzing Verilog file "D:\lzq123\co\P5\mips\im.v" into library work
 Parsing module <im>.
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.93 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.92 secs
  
 --> 
 

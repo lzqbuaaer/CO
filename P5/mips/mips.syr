@@ -1,0 +1,392 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: mips.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips"
+Output Format                      : NGC
+Target Device                      : xc6slx100-2-fgg676
+
+---- Source Options
+Top Module Name                    : mips
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\lzq123\co\P5\mips\decode.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <decode>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\pc.v" into library work
+Parsing module <pc>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\npc.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <npc>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\mw_reg.v" into library work
+Parsing module <mw_reg>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\im.v" into library work
+Parsing module <im>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\grf.v" into library work
+Parsing module <grf>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\fd_reg.v" into library work
+Parsing module <fd_reg>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\ext.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <ext>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\em_reg.v" into library work
+Parsing module <em_reg>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\dm.v" into library work
+Parsing module <dm>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\de_reg.v" into library work
+Parsing module <de_reg>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\control.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <control>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\conflict.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <conflict>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\cmp.v" into library work
+Parsing module <cmp>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\alu.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <alu>.
+Analyzing Verilog file "D:\lzq123\co\P5\mips\mips.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <mips>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P5\mips\mips.v" Line 125: Port RFWr is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P5\mips\mips.v" Line 130: Port NPCOp is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P5\mips\mips.v" Line 135: Port NPCOp is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P5\mips\mips.v" Line 139: Port NPCOp is not connected to this instance
+
+Elaborating module <mips>.
+
+Elaborating module <control>.
+
+Elaborating module <conflict>.
+
+Elaborating module <decode>.
+WARNING:HDLCompiler:1127 - "D:\lzq123\co\P5\mips\conflict.v" Line 51: Assignment to D_A3 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\lzq123\co\P5\mips\conflict.v" Line 53: Assignment to M_A1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\lzq123\co\P5\mips\conflict.v" Line 54: Assignment to W_intr ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\lzq123\co\P5\mips\conflict.v" Line 65: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\lzq123\co\P5\mips\conflict.v" Line 67: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\lzq123\co\P5\mips\conflict.v" Line 69: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\lzq123\co\P5\mips\conflict.v" Line 70: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "D:\lzq123\co\P5\mips\conflict.v" Line 72: Assignment to E_rs_Tuse ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\lzq123\co\P5\mips\conflict.v" Line 73: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "D:\lzq123\co\P5\mips\conflict.v" Line 73: Assignment to E_rt_Tuse ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\lzq123\co\P5\mips\conflict.v" Line 74: Assignment to M_rt_Tuse ignored, since the identifier is never used
+
+Elaborating module <pc>.
+
+Elaborating module <im>.
+Reading initialization file \"code.txt\".
+WARNING:HDLCompiler:1670 - "D:\lzq123\co\P5\mips\im.v" Line 27: Signal <im_reg> in initial block is partially initialized.
+
+Elaborating module <fd_reg>.
+
+Elaborating module <npc>.
+
+Elaborating module <grf>.
+"D:\lzq123\co\P5\mips\grf.v" Line 43. $display @0: $0 <= 0
+
+Elaborating module <ext>.
+
+Elaborating module <cmp>.
+
+Elaborating module <de_reg>.
+
+Elaborating module <alu>.
+
+Elaborating module <em_reg>.
+
+Elaborating module <dm>.
+"D:\lzq123\co\P5\mips\dm.v" Line 40. $display @0: *0 <= 0
+
+Elaborating module <mw_reg>.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 125. All outputs of instance <D_CTRL> of block <control> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 130. All outputs of instance <E_CTRL> of block <control> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 135. All outputs of instance <M_CTRL> of block <control> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 139. All outputs of instance <W_CTRL> of block <control> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 145. All outputs of instance <Conflict> of block <conflict> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 157. All outputs of instance <PC> of block <pc> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 164. All outputs of instance <IM> of block <im> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 168. All outputs of instance <FD_REG> of block <fd_reg> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 177. All outputs of instance <NPC> of block <npc> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 187. All outputs of instance <GRF> of block <grf> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 199. All outputs of instance <EXT> of block <ext> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 204. All outputs of instance <CMP> of block <cmp> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 209. All outputs of instance <DE_REG> of block <de_reg> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 225. All outputs of instance <ALU> of block <alu> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 231. All outputs of instance <EM_REG> of block <em_reg> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 245. All outputs of instance <DM> of block <dm> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\lzq123\co\P5\mips\mips.v" line 254. All outputs of instance <MW_REG> of block <mw_reg> are unconnected in block <mips>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mips>.
+    Related source file is "D:\lzq123\co\P5\mips\mips.v".
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 125: Output port <ALUOp> of the instance <D_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 125: Output port <RFA3Sel> of the instance <D_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 125: Output port <RFWDSel> of the instance <D_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 125: Output port <RFWr> of the instance <D_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 125: Output port <ALUBSel> of the instance <D_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 125: Output port <DMWr> of the instance <D_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 130: Output port <NPCOp> of the instance <E_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 130: Output port <RFA3Sel> of the instance <E_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 130: Output port <RFWDSel> of the instance <E_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 130: Output port <RFWr> of the instance <E_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 130: Output port <EXTOp> of the instance <E_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 130: Output port <DMWr> of the instance <E_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 135: Output port <NPCOp> of the instance <M_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 135: Output port <ALUOp> of the instance <M_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 135: Output port <RFA3Sel> of the instance <M_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 135: Output port <RFWDSel> of the instance <M_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 135: Output port <RFWr> of the instance <M_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 135: Output port <EXTOp> of the instance <M_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 135: Output port <ALUBSel> of the instance <M_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 139: Output port <NPCOp> of the instance <W_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 139: Output port <ALUOp> of the instance <W_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 139: Output port <EXTOp> of the instance <W_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 139: Output port <ALUBSel> of the instance <W_CTRL> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\lzq123\co\P5\mips\mips.v" line 139: Output port <DMWr> of the instance <W_CTRL> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <mips> synthesized.
+
+Synthesizing Unit <decode>.
+    Related source file is "D:\lzq123\co\P5\mips\decode.v".
+WARNING:Xst:647 - Input <IR<10:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <decode> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mips> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mips.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx100fgg676-2 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                           2
+ Number of bonded IOBs:                   0  out of    480     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.30 secs
+ 
+--> 
+
+Total memory usage is 5556024 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :   24 (   0 filtered)
+

@@ -43,8 +43,8 @@ Analyzing Verilog file "D:\lzq123\co\P5\mips\fd_reg.v" into library work
 Parsing module <fd_reg>.
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.91 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.87 secs
  
 --> 
 
