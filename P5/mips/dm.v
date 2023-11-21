@@ -37,7 +37,7 @@ module dm(
         end
         else if(DMWr == 1) begin
             dm[addr[13:2]] <= WD;
-            $display("@%h: *%h <= %h", pc, addr, WD);
+            $display("%d@%h: *%h <= %h", $time, pc, addr, WD);
         end
     end
     assign RD = dm[addr[13:2]];

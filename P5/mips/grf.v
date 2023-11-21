@@ -40,7 +40,7 @@ module grf(
         end
         else if(RFWr == 1 && A3 != 0) begin
             register[A3] <= WD;
-            $display("@%h: $%d <= %h", pc, A3, WD);
+            $display("%d@%h: $%d <= %h", $time, pc, A3, WD);
         end
     end
     assign RD1 = register[A1];

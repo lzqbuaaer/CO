@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to D:/lzq123/co/P5/mips/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: mips.prj
 
@@ -81,7 +81,7 @@ Parsing module <mips>.
 
 
 Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 1.94 secs
+Total CPU time to Xst completion: 2.07 secs
  
 --> 
 

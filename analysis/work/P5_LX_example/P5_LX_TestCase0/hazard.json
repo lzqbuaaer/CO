@@ -1,0 +1,5775 @@
+{
+    "forwarding": [
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x63930000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x0000302c"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003028",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x00003024",
+                    "instr": "jal 0x#000361c"
+                },
+                "m": {
+                    "pc": "0x00003020",
+                    "instr": "ori $7, $6, 0xc284"
+                },
+                "w": {
+                    "pc": "0x0000301c",
+                    "instr": "lui $7, 0x8d12"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0000302c"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x0000302c"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003620",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "w": {
+                    "pc": "0x0000361c",
+                    "instr": "lw $31, 0($0)"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003628",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x00003038",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003034",
+                    "instr": "jal 0x#0003628"
+                },
+                "w": {
+                    "pc": "0x00003030",
+                    "instr": "add $7, $6, $5"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x66450000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x0000303c"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000362c",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x00003628",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x00003038",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003034",
+                    "instr": "jal 0x#0003628"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xfffffffc"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003630",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x0000362c",
+                    "instr": "add $31, $1, $31"
+                },
+                "m": {
+                    "pc": "0x00003628",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "w": {
+                    "pc": "0x00003038",
+                    "instr": "lui $1, 0xffff"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0000303c"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00003038"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003630",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x0000362c",
+                    "instr": "add $31, $1, $31"
+                },
+                "w": {
+                    "pc": "0x00003628",
+                    "instr": "ori $1, $1, 0xfffc"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 7,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003040",
+                    "instr": "sub $5, $31, $7"
+                },
+                "e": {
+                    "pc": "0x0000303c",
+                    "instr": "sub $31, $7, $5"
+                },
+                "m": {
+                    "pc": "0x00003038",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003634",
+                    "instr": "lw $7, 4848($7)"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 7,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003040",
+                    "instr": "sub $5, $31, $7"
+                },
+                "e": {
+                    "pc": "0x0000303c",
+                    "instr": "sub $31, $7, $5"
+                },
+                "m": {
+                    "pc": "0x00003038",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003634",
+                    "instr": "lw $7, 4848($7)"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00003038"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003044",
+                    "instr": "add $6, $6, $5"
+                },
+                "e": {
+                    "pc": "0x00003040",
+                    "instr": "sub $5, $31, $7"
+                },
+                "m": {
+                    "pc": "0x0000303c",
+                    "instr": "sub $31, $7, $5"
+                },
+                "w": {
+                    "pc": "0x00003038",
+                    "instr": "lui $1, 0xffff"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 5,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003048",
+                    "instr": "add $6, $31, $31"
+                },
+                "e": {
+                    "pc": "0x00003044",
+                    "instr": "add $6, $6, $5"
+                },
+                "m": {
+                    "pc": "0x00003040",
+                    "instr": "sub $5, $31, $7"
+                },
+                "w": {
+                    "pc": "0x0000303c",
+                    "instr": "sub $31, $7, $5"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003038"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003048",
+                    "instr": "add $6, $31, $31"
+                },
+                "e": {
+                    "pc": "0x00003044",
+                    "instr": "add $6, $6, $5"
+                },
+                "m": {
+                    "pc": "0x00003040",
+                    "instr": "sub $5, $31, $7"
+                },
+                "w": {
+                    "pc": "0x0000303c",
+                    "instr": "sub $31, $7, $5"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 5,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x0000456d"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003058",
+                    "instr": "ori $6, $5, 0xae2e"
+                },
+                "e": {
+                    "pc": "0x00003054",
+                    "instr": "ori $31, $31, 0x41f8"
+                },
+                "m": {
+                    "pc": "0x00003050",
+                    "instr": "sub $6, $7, $31"
+                },
+                "w": {
+                    "pc": "0x0000304c",
+                    "instr": "ori $5, $31, 0x456d"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000041f8"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003068"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003064",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x00003060",
+                    "instr": "jal 0x#0003638"
+                },
+                "m": {
+                    "pc": "0x0000305c",
+                    "instr": "sub $5, $7, $7"
+                },
+                "w": {
+                    "pc": "0x00003058",
+                    "instr": "ori $6, $5, 0xae2e"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003068"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x0000ef6f"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000306c",
+                    "instr": "ori $31, $31, 0x27ec"
+                },
+                "e": {
+                    "pc": "0x00003068",
+                    "instr": "lui $5, 0xc1c7"
+                },
+                "m": {
+                    "pc": "0x00003640",
+                    "instr": "add $31, $7, $6"
+                },
+                "w": {
+                    "pc": "0x0000363c",
+                    "instr": "jr $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 5,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0xc1c70000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003074",
+                    "instr": "beq $6, $5, 371"
+                },
+                "e": {
+                    "pc": "0x00003070",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x0000306c",
+                    "instr": "ori $31, $31, 0x27ec"
+                },
+                "w": {
+                    "pc": "0x00003068",
+                    "instr": "lui $5, 0xc1c7"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 6,
+                "old": {
+                    "stage": "d",
+                    "value": "0xc1c7cfbf"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x5d5c0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003084",
+                    "instr": "sub $7, $6, $5"
+                },
+                "e": {
+                    "pc": "0x00003080",
+                    "instr": "lui $6, 0x5d5c"
+                },
+                "m": {
+                    "pc": "0x0000307c",
+                    "instr": "ori $6, $5, 0xcfbf"
+                },
+                "w": {
+                    "pc": "0x00003078",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003654",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x00003098",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003094",
+                    "instr": "jal 0x#0003654"
+                },
+                "w": {
+                    "pc": "0x00003090",
+                    "instr": "ori $5, $6, 0x4541"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0000efef"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x0000309c"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003658",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x00003654",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x00003098",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003094",
+                    "instr": "jal 0x#0003654"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003664",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x000030a4",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x000030a0",
+                    "instr": "jal 0x#0003664"
+                },
+                "w": {
+                    "pc": "0x0000309c",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003098"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x000030a8"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003668",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x00003664",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x000030a4",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x000030a0",
+                    "instr": "jal 0x#0003664"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 5,
+                "old": {
+                    "stage": "d",
+                    "value": "0x5d5c4541"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x5d5cddd1"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000030b4",
+                    "instr": "ori $31, $5, 0xfe85"
+                },
+                "e": {
+                    "pc": "0x000030b0",
+                    "instr": "lui $31, 0x4ba2"
+                },
+                "m": {
+                    "pc": "0x000030ac",
+                    "instr": "ori $5, $5, 0xd991"
+                },
+                "w": {
+                    "pc": "0x000030a8",
+                    "instr": "sub $6, $7, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 5,
+                "old": {
+                    "stage": "d",
+                    "value": "0x5d5c4541"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x5d5cddd1"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000030b8",
+                    "instr": "sub $7, $6, $5"
+                },
+                "e": {
+                    "pc": "0x000030b4",
+                    "instr": "ori $31, $5, 0xfe85"
+                },
+                "m": {
+                    "pc": "0x000030b0",
+                    "instr": "lui $31, 0x4ba2"
+                },
+                "w": {
+                    "pc": "0x000030ac",
+                    "instr": "ori $5, $5, 0xd991"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x4ba20000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x5d5cffd5"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000030c0",
+                    "instr": "add $7, $5, $31"
+                },
+                "e": {
+                    "pc": "0x000030bc",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x000030b8",
+                    "instr": "sub $7, $6, $5"
+                },
+                "w": {
+                    "pc": "0x000030b4",
+                    "instr": "ori $31, $5, 0xfe85"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000030d0"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003674",
+                    "instr": "ori $31, $31, 0x30cc"
+                },
+                "e": {
+                    "pc": "0x000030cc",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x000030c8",
+                    "instr": "jal 0x#0003674"
+                },
+                "w": {
+                    "pc": "0x000030c4",
+                    "instr": "lui $5, 0xc6bc"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x000030cc"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003678",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003674",
+                    "instr": "ori $31, $31, 0x30cc"
+                },
+                "w": {
+                    "pc": "0x000030cc",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003680",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x000030dc",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x000030d8",
+                    "instr": "jal 0x#0003680"
+                },
+                "w": {
+                    "pc": "0x000030d4",
+                    "instr": "ori $6, $5, 0x8882"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x000030e0"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003684",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x00003680",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x000030dc",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x000030d8",
+                    "instr": "jal 0x#0003680"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 5,
+                "old": {
+                    "stage": "d",
+                    "value": "0xc6bc0000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x2d7c0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000030ec",
+                    "instr": "sub $7, $31, $5"
+                },
+                "e": {
+                    "pc": "0x000030e8",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x000030e4",
+                    "instr": "beq $7, $6, 362"
+                },
+                "w": {
+                    "pc": "0x000030e0",
+                    "instr": "lui $5, 0x2d7c"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0c02225a"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x000030f8"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000030f4",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x000030f0",
+                    "instr": "jal 0x#0003698"
+                },
+                "m": {
+                    "pc": "0x000030ec",
+                    "instr": "sub $7, $31, $5"
+                },
+                "w": {
+                    "pc": "0x000030e8",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 25,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0xab850000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000310c",
+                    "instr": "beq $25, $26, 357"
+                },
+                "e": {
+                    "pc": "0x00003108",
+                    "instr": "sub $24, $24, $24"
+                },
+                "m": {
+                    "pc": "0x00003104",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x00003100",
+                    "instr": "lui $25, 0xab85"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 24,
+                "old": {
+                    "stage": "d",
+                    "value": "0x180d0000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003114",
+                    "instr": "beq $24, $25, 357"
+                },
+                "e": {
+                    "pc": "0x00003110",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x0000310c",
+                    "instr": "beq $25, $26, 357"
+                },
+                "w": {
+                    "pc": "0x00003108",
+                    "instr": "sub $24, $24, $24"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 24,
+                "old": {
+                    "stage": "d",
+                    "value": "0x68170000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003138",
+                    "instr": "beq $25, $24, 354"
+                },
+                "e": {
+                    "pc": "0x000036c0",
+                    "instr": "sw $26, 7948($26)"
+                },
+                "m": {
+                    "pc": "0x000036bc",
+                    "instr": "beq $26, $26, -354"
+                },
+                "w": {
+                    "pc": "0x00003134",
+                    "instr": "lw $24, 7420($26)"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 26,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x547b0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003158",
+                    "instr": "add $31, $26, $31"
+                },
+                "e": {
+                    "pc": "0x00003154",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x00003150",
+                    "instr": "beq $31, $25, 350"
+                },
+                "w": {
+                    "pc": "0x0000314c",
+                    "instr": "sub $26, $24, $25"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0000c9ed"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xab858469"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003164",
+                    "instr": "beq $31, $24, 347"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003160",
+                    "instr": "ori $31, $25, 0x8469"
+                },
+                "w": {
+                    "pc": "0x0000315c",
+                    "instr": "ori $26, $26, 0x7f9c"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 24,
+                "old": {
+                    "stage": "d",
+                    "value": "0xab858469"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x0dea0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003178",
+                    "instr": "add $31, $24, $24"
+                },
+                "e": {
+                    "pc": "0x00003174",
+                    "instr": "lui $24, 0x0dea"
+                },
+                "m": {
+                    "pc": "0x00003170",
+                    "instr": "add $24, $24, $31"
+                },
+                "w": {
+                    "pc": "0x0000316c",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x1bd40000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003188"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003184",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x00003180",
+                    "instr": "jal 0x#00036dc"
+                },
+                "m": {
+                    "pc": "0x0000317c",
+                    "instr": "sub $24, $26, $25"
+                },
+                "w": {
+                    "pc": "0x00003178",
+                    "instr": "add $31, $24, $24"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 25,
+                "old": {
+                    "stage": "d",
+                    "value": "0xab850000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xa8f67ffc"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003190",
+                    "instr": "beq $24, $25, 343"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x000036ec",
+                    "instr": "ori $25, $24, 0x7460"
+                },
+                "w": {
+                    "pc": "0x000036e8",
+                    "instr": "beq $24, $24, -343"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00007f9c"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x000031a4"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000031a0",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x0000319c",
+                    "instr": "jal 0x#00036f8"
+                },
+                "m": {
+                    "pc": "0x00003198",
+                    "instr": "ori $26, $26, 0x2ce4"
+                },
+                "w": {
+                    "pc": "0x00003194",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 24,
+                "old": {
+                    "stage": "d",
+                    "value": "0xa8f67f9c"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x1ae30000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000031a8",
+                    "instr": "beq $24, $24, 342"
+                },
+                "e": {
+                    "pc": "0x000031a4",
+                    "instr": "lui $24, 0x1ae3"
+                },
+                "m": {
+                    "pc": "0x00003700",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x000036fc",
+                    "instr": "jr $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 24,
+                "old": {
+                    "stage": "d",
+                    "value": "0xa8f67f9c"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x1ae30000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003704",
+                    "instr": "beq $24, $24, -342"
+                },
+                "e": {
+                    "pc": "0x000031ac",
+                    "instr": "lui $31, 0xebeb"
+                },
+                "m": {
+                    "pc": "0x000031a8",
+                    "instr": "beq $24, $24, 342"
+                },
+                "w": {
+                    "pc": "0x000031a4",
+                    "instr": "lui $24, 0x1ae3"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 24,
+                "old": {
+                    "stage": "d",
+                    "value": "0x1ae30000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x3e370000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000031c4",
+                    "instr": "beq $25, $24, 337"
+                },
+                "e": {
+                    "pc": "0x000031c0",
+                    "instr": "lui $31, 0x7ecc"
+                },
+                "m": {
+                    "pc": "0x000031bc",
+                    "instr": "lui $24, 0x3e37"
+                },
+                "w": {
+                    "pc": "0x000031b8",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 25,
+                "old": {
+                    "stage": "d",
+                    "value": "0xa8f67ffc"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x8bfc0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000031d4",
+                    "instr": "sub $26, $25, $24"
+                },
+                "e": {
+                    "pc": "0x000031d0",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x000031cc",
+                    "instr": "lui $25, 0x8bfc"
+                },
+                "w": {
+                    "pc": "0x000031c8",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 25,
+                "old": {
+                    "stage": "d",
+                    "value": "0xa8f67ffc"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x8bfc0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000031d8",
+                    "instr": "beq $24, $25, 334"
+                },
+                "e": {
+                    "pc": "0x000031d4",
+                    "instr": "sub $26, $25, $24"
+                },
+                "m": {
+                    "pc": "0x000031d0",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x000031cc",
+                    "instr": "lui $25, 0x8bfc"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 26,
+                "old": {
+                    "stage": "d",
+                    "value": "0x547b7ffc"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x4dc50000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000031e0",
+                    "instr": "add $31, $26, $31"
+                },
+                "e": {
+                    "pc": "0x000031dc",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x000031d8",
+                    "instr": "beq $24, $25, 334"
+                },
+                "w": {
+                    "pc": "0x000031d4",
+                    "instr": "sub $26, $25, $24"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x7ecc0000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xcc910000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000031e8",
+                    "instr": "sub $26, $24, $31"
+                },
+                "e": {
+                    "pc": "0x000031e4",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x000031e0",
+                    "instr": "add $31, $26, $31"
+                },
+                "w": {
+                    "pc": "0x000031dc",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 26,
+                "old": {
+                    "stage": "e",
+                    "value": "0x71a60000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xca330000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000031f4",
+                    "instr": "add $12, $31, $11"
+                },
+                "e": {
+                    "pc": "0x000031f0",
+                    "instr": "sub $26, $26, $31"
+                },
+                "m": {
+                    "pc": "0x000031ec",
+                    "instr": "add $26, $24, $25"
+                },
+                "w": {
+                    "pc": "0x000031e8",
+                    "instr": "sub $26, $24, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 11,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xaf600000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003200",
+                    "instr": "sub $31, $31, $11"
+                },
+                "e": {
+                    "pc": "0x000031fc",
+                    "instr": "lui $11, 0xaf60"
+                },
+                "m": {
+                    "pc": "0x000031f8",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x000031f4",
+                    "instr": "add $12, $31, $11"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 11,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xaf600000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003204",
+                    "instr": "beq $31, $11, 325"
+                },
+                "e": {
+                    "pc": "0x00003200",
+                    "instr": "sub $31, $31, $11"
+                },
+                "m": {
+                    "pc": "0x000031fc",
+                    "instr": "lui $11, 0xaf60"
+                },
+                "w": {
+                    "pc": "0x000031f8",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0xcc910000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x1d310000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003204",
+                    "instr": "beq $31, $11, 325"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003200",
+                    "instr": "sub $31, $31, $11"
+                },
+                "w": {
+                    "pc": "0x000031fc",
+                    "instr": "lui $11, 0xaf60"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 11,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0xaf600000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003204",
+                    "instr": "beq $31, $11, 325"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003200",
+                    "instr": "sub $31, $31, $11"
+                },
+                "w": {
+                    "pc": "0x000031fc",
+                    "instr": "lui $11, 0xaf60"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003724",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x00003214",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003210",
+                    "instr": "jal 0x#0003724"
+                },
+                "w": {
+                    "pc": "0x0000320c",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x1d310000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00003218"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003728",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x00003724",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x00003214",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003210",
+                    "instr": "jal 0x#0003724"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 11,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xcc913214"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003228",
+                    "instr": "add $10, $12, $11"
+                },
+                "e": {
+                    "pc": "0x00003224",
+                    "instr": "add $11, $11, $31"
+                },
+                "m": {
+                    "pc": "0x00003220",
+                    "instr": "add $11, $12, $31"
+                },
+                "w": {
+                    "pc": "0x0000321c",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 11,
+                "old": {
+                    "stage": "e",
+                    "value": "0xcc913214"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xcc916428"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000322c",
+                    "instr": "jal 0x#0003734"
+                },
+                "e": {
+                    "pc": "0x00003228",
+                    "instr": "add $10, $12, $11"
+                },
+                "m": {
+                    "pc": "0x00003224",
+                    "instr": "add $11, $11, $31"
+                },
+                "w": {
+                    "pc": "0x00003220",
+                    "instr": "add $11, $12, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003214"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003234"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003230",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x0000322c",
+                    "instr": "jal 0x#0003734"
+                },
+                "m": {
+                    "pc": "0x00003228",
+                    "instr": "add $10, $12, $11"
+                },
+                "w": {
+                    "pc": "0x00003224",
+                    "instr": "add $11, $11, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003234"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x0000324c"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003248",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x00003244",
+                    "instr": "jal 0x#0003740"
+                },
+                "m": {
+                    "pc": "0x00003240",
+                    "instr": "lui $12, 0xfe37"
+                },
+                "w": {
+                    "pc": "0x0000323c",
+                    "instr": "add $10, $31, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 11,
+                "old": {
+                    "stage": "d",
+                    "value": "0xcf0c0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xf8390000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000324c",
+                    "instr": "add $12, $11, $10"
+                },
+                "e": {
+                    "pc": "0x00003748",
+                    "instr": "lui $11, 0xf839"
+                },
+                "m": {
+                    "pc": "0x00003744",
+                    "instr": "jr $31"
+                },
+                "w": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0000324c"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003258"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003254",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x00003250",
+                    "instr": "jal 0x#000374c"
+                },
+                "m": {
+                    "pc": "0x0000324c",
+                    "instr": "add $12, $11, $10"
+                },
+                "w": {
+                    "pc": "0x00003748",
+                    "instr": "lui $11, 0xf839"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 10,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00006468"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xf8395090"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003268",
+                    "instr": "ori $11, $10, 0x002b"
+                },
+                "e": {
+                    "pc": "0x00003264",
+                    "instr": "ori $12, $10, 0xf474"
+                },
+                "m": {
+                    "pc": "0x0000375c",
+                    "instr": "ori $10, $11, 0x5090"
+                },
+                "w": {
+                    "pc": "0x00003758",
+                    "instr": "beq $11, $11, -318"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 10,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00006468"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xf8395090"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003268",
+                    "instr": "ori $11, $10, 0x002b"
+                },
+                "e": {
+                    "pc": "0x00003264",
+                    "instr": "ori $12, $10, 0xf474"
+                },
+                "m": {
+                    "pc": "0x0000375c",
+                    "instr": "ori $10, $11, 0x5090"
+                },
+                "w": {
+                    "pc": "0x00003758",
+                    "instr": "beq $11, $11, -318"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 10,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00006468"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0xf8395090"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000326c",
+                    "instr": "add $11, $10, $11"
+                },
+                "e": {
+                    "pc": "0x00003268",
+                    "instr": "ori $11, $10, 0x002b"
+                },
+                "m": {
+                    "pc": "0x00003264",
+                    "instr": "ori $12, $10, 0xf474"
+                },
+                "w": {
+                    "pc": "0x0000375c",
+                    "instr": "ori $10, $11, 0x5090"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 11,
+                "old": {
+                    "stage": "e",
+                    "value": "0xf8390000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xf83950bb"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003270",
+                    "instr": "jal 0x#0003760"
+                },
+                "e": {
+                    "pc": "0x0000326c",
+                    "instr": "add $11, $10, $11"
+                },
+                "m": {
+                    "pc": "0x00003268",
+                    "instr": "ori $11, $10, 0x002b"
+                },
+                "w": {
+                    "pc": "0x00003264",
+                    "instr": "ori $12, $10, 0xf474"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003760",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x00003274",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003270",
+                    "instr": "jal 0x#0003760"
+                },
+                "w": {
+                    "pc": "0x0000326c",
+                    "instr": "add $11, $10, $11"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003258"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00003278"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003764",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x00003760",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x00003274",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003270",
+                    "instr": "jal 0x#0003760"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00003274"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xe8abf1db"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003280",
+                    "instr": "beq $11, $10, 315"
+                },
+                "e": {
+                    "pc": "0x0000327c",
+                    "instr": "add $31, $10, $31"
+                },
+                "m": {
+                    "pc": "0x00003278",
+                    "instr": "add $31, $11, $10"
+                },
+                "w": {
+                    "pc": "0x00003274",
+                    "instr": "lui $1, 0xffff"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003294"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003778",
+                    "instr": "ori $31, $31, 0x3290"
+                },
+                "e": {
+                    "pc": "0x00003290",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x0000328c",
+                    "instr": "jal 0x#0003778"
+                },
+                "w": {
+                    "pc": "0x00003288",
+                    "instr": "lui $12, 0x7f6d"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00003290"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000377c",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003778",
+                    "instr": "ori $31, $31, 0x3290"
+                },
+                "w": {
+                    "pc": "0x00003290",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 12,
+                "old": {
+                    "stage": "e",
+                    "value": "0x7f6d0000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xf83953dd"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000032a4",
+                    "instr": "sll $0, $0, 0"
+                },
+                "e": {
+                    "pc": "0x000032a0",
+                    "instr": "sub $11, $10, $12"
+                },
+                "m": {
+                    "pc": "0x0000329c",
+                    "instr": "ori $12, $10, 0x434d"
+                },
+                "w": {
+                    "pc": "0x00003298",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 11,
+                "old": {
+                    "stage": "d",
+                    "value": "0xfffffcb3"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x13c00000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000032b0",
+                    "instr": "ori $11, $11, 0xc425"
+                },
+                "e": {
+                    "pc": "0x000032ac",
+                    "instr": "lui $11, 0x13c0"
+                },
+                "m": {
+                    "pc": "0x000032a8",
+                    "instr": "sub $12, $10, $31"
+                },
+                "w": {
+                    "pc": "0x000032a4",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 11,
+                "old": {
+                    "stage": "e",
+                    "value": "0x13c00000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x13c0c425"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000032b8",
+                    "instr": "sub $31, $12, $12"
+                },
+                "e": {
+                    "pc": "0x000032b4",
+                    "instr": "sub $31, $11, $31"
+                },
+                "m": {
+                    "pc": "0x000032b0",
+                    "instr": "ori $11, $11, 0xc425"
+                },
+                "w": {
+                    "pc": "0x000032ac",
+                    "instr": "lui $11, 0x13c0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 12,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x000073e8"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000032e0",
+                    "instr": "sub $31, $12, $12"
+                },
+                "e": {
+                    "pc": "0x000032dc",
+                    "instr": "lui $10, 0xcf7c"
+                },
+                "m": {
+                    "pc": "0x00003790",
+                    "instr": "ori $12, $31, 0x73e8"
+                },
+                "w": {
+                    "pc": "0x0000378c",
+                    "instr": "beq $31, $31, -301"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 10,
+                "old": {
+                    "stage": "d",
+                    "value": "0x2f490000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xcf7c0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000032e4",
+                    "instr": "sub $31, $31, $10"
+                },
+                "e": {
+                    "pc": "0x000032e0",
+                    "instr": "sub $31, $12, $12"
+                },
+                "m": {
+                    "pc": "0x000032dc",
+                    "instr": "lui $10, 0xcf7c"
+                },
+                "w": {
+                    "pc": "0x00003790",
+                    "instr": "ori $12, $31, 0x73e8"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000032e8",
+                    "instr": "sub $24, $24, $25"
+                },
+                "e": {
+                    "pc": "0x000032e4",
+                    "instr": "sub $31, $31, $10"
+                },
+                "m": {
+                    "pc": "0x000032e0",
+                    "instr": "sub $31, $12, $12"
+                },
+                "w": {
+                    "pc": "0x000032dc",
+                    "instr": "lui $10, 0xcf7c"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000032f4"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003794",
+                    "instr": "ori $31, $31, 0x32f0"
+                },
+                "e": {
+                    "pc": "0x000032f0",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x000032ec",
+                    "instr": "jal 0x#0003794"
+                },
+                "w": {
+                    "pc": "0x000032e8",
+                    "instr": "sub $24, $24, $25"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x000032f0"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003798",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003794",
+                    "instr": "ori $31, $31, 0x32f0"
+                },
+                "w": {
+                    "pc": "0x000032f0",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003300"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000032fc",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x000032f8",
+                    "instr": "jal 0x#00037a0"
+                },
+                "m": {
+                    "pc": "0x000032f4",
+                    "instr": "ori $25, $24, 0xf0fa"
+                },
+                "w": {
+                    "pc": "0x000032f0",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 26,
+                "old": {
+                    "stage": "d",
+                    "value": "0xfda20000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x85620000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003308",
+                    "instr": "sub $24, $31, $26"
+                },
+                "e": {
+                    "pc": "0x00003304",
+                    "instr": "lui $26, 0x8562"
+                },
+                "m": {
+                    "pc": "0x00003300",
+                    "instr": "add $25, $24, $25"
+                },
+                "w": {
+                    "pc": "0x000037a8",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 25,
+                "old": {
+                    "stage": "d",
+                    "value": "0xb23bf0fa"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x6476f0fa"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000330c",
+                    "instr": "ori $31, $25, 0x585b"
+                },
+                "e": {
+                    "pc": "0x00003308",
+                    "instr": "sub $24, $31, $26"
+                },
+                "m": {
+                    "pc": "0x00003304",
+                    "instr": "lui $26, 0x8562"
+                },
+                "w": {
+                    "pc": "0x00003300",
+                    "instr": "add $25, $24, $25"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x6476f8fb"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003318"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003314",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x00003310",
+                    "instr": "jal 0x#00037ac"
+                },
+                "m": {
+                    "pc": "0x0000330c",
+                    "instr": "ori $31, $25, 0x585b"
+                },
+                "w": {
+                    "pc": "0x00003308",
+                    "instr": "sub $24, $31, $26"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000037b8",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x00003328",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003324",
+                    "instr": "jal 0x#00037b8"
+                },
+                "w": {
+                    "pc": "0x00003320",
+                    "instr": "add $31, $25, $25"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0xc8ede1f4"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x0000332c"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000037bc",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x000037b8",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x00003328",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003324",
+                    "instr": "jal 0x#00037b8"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0000332c"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00003328"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000037c4",
+                    "instr": "sub $31, $31, $25"
+                },
+                "e": {
+                    "pc": "0x000037c0",
+                    "instr": "jr $31"
+                },
+                "m": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "w": {
+                    "pc": "0x000037bc",
+                    "instr": "add $31, $1, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003334"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000037c8",
+                    "instr": "ori $31, $31, 0x3330"
+                },
+                "e": {
+                    "pc": "0x00003330",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x0000332c",
+                    "instr": "jal 0x#00037c8"
+                },
+                "w": {
+                    "pc": "0x00003328",
+                    "instr": "lui $1, 0xffff"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00003330"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000037cc",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x000037c8",
+                    "instr": "ori $31, $31, 0x3330"
+                },
+                "w": {
+                    "pc": "0x00003330",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 25,
+                "old": {
+                    "stage": "e",
+                    "value": "0x6476f0fa"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x7b4a0f06"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003354",
+                    "instr": "lui $25, 0xecc0"
+                },
+                "e": {
+                    "pc": "0x00003350",
+                    "instr": "add $31, $24, $25"
+                },
+                "m": {
+                    "pc": "0x0000334c",
+                    "instr": "sub $25, $24, $25"
+                },
+                "w": {
+                    "pc": "0x00003348",
+                    "instr": "ori $26, $31, 0x9976"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x5b0b0f06"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003360"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000335c",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x00003358",
+                    "instr": "jal 0x#00037dc"
+                },
+                "m": {
+                    "pc": "0x00003354",
+                    "instr": "lui $25, 0xecc0"
+                },
+                "w": {
+                    "pc": "0x00003350",
+                    "instr": "add $31, $24, $25"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000037e8",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x00003364",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003360",
+                    "instr": "jal 0x#00037e8"
+                },
+                "w": {
+                    "pc": "0x000037e4",
+                    "instr": "add $25, $25, $24"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003360"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00003368"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000037ec",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x000037e8",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x00003364",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003360",
+                    "instr": "jal 0x#00037e8"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 26,
+                "old": {
+                    "stage": "d",
+                    "value": "0xdfc199f7"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xdfd80000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003380",
+                    "instr": "sub $31, $26, $25"
+                },
+                "e": {
+                    "pc": "0x0000337c",
+                    "instr": "lui $26, 0xdfd8"
+                },
+                "m": {
+                    "pc": "0x00003378",
+                    "instr": "lui $31, 0x645f"
+                },
+                "w": {
+                    "pc": "0x00003374",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "e",
+                    "value": "0x0000b37f"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x5d9b0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003388",
+                    "instr": "jal 0x#0003800"
+                },
+                "e": {
+                    "pc": "0x00003384",
+                    "instr": "add $25, $31, $31"
+                },
+                "m": {
+                    "pc": "0x00003380",
+                    "instr": "sub $31, $26, $25"
+                },
+                "w": {
+                    "pc": "0x0000337c",
+                    "instr": "lui $26, 0xdfd8"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003800",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x0000338c",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003388",
+                    "instr": "jal 0x#0003800"
+                },
+                "w": {
+                    "pc": "0x00003384",
+                    "instr": "add $25, $31, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x5d9b0000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00003390"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003804",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x00003800",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x0000338c",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003388",
+                    "instr": "jal 0x#0003800"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 26,
+                "old": {
+                    "stage": "e",
+                    "value": "0xdfd80000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xdfd8338c"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000339c",
+                    "instr": "ori $26, $26, 0x8adf"
+                },
+                "e": {
+                    "pc": "0x00003398",
+                    "instr": "sub $25, $31, $26"
+                },
+                "m": {
+                    "pc": "0x00003394",
+                    "instr": "add $26, $31, $26"
+                },
+                "w": {
+                    "pc": "0x00003390",
+                    "instr": "sub $25, $31, $25"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 26,
+                "old": {
+                    "stage": "d",
+                    "value": "0xdfd80000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xdfd8338c"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000339c",
+                    "instr": "ori $26, $26, 0x8adf"
+                },
+                "e": {
+                    "pc": "0x00003398",
+                    "instr": "sub $25, $31, $26"
+                },
+                "m": {
+                    "pc": "0x00003394",
+                    "instr": "add $26, $31, $26"
+                },
+                "w": {
+                    "pc": "0x00003390",
+                    "instr": "sub $25, $31, $25"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000033b0"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003810",
+                    "instr": "ori $31, $31, 0x33ac"
+                },
+                "e": {
+                    "pc": "0x000033ac",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x000033a8",
+                    "instr": "jal 0x#0003810"
+                },
+                "w": {
+                    "pc": "0x000033a4",
+                    "instr": "lui $31, 0x513a"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x000033ac"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003814",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003810",
+                    "instr": "ori $31, $31, 0x33ac"
+                },
+                "w": {
+                    "pc": "0x000033ac",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000381c",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x000033b4",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x000033b0",
+                    "instr": "jal 0x#000381c"
+                },
+                "w": {
+                    "pc": "0x000033ac",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x000033b8"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003820",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x0000381c",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x000033b4",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x000033b0",
+                    "instr": "jal 0x#000381c"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000033b4"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x60780000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000033b8",
+                    "instr": "sub $26, $25, $31"
+                },
+                "e": {
+                    "pc": "0x000033b4",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003828",
+                    "instr": "add $31, $25, $24"
+                },
+                "w": {
+                    "pc": "0x00003824",
+                    "instr": "jr $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 26,
+                "old": {
+                    "stage": "e",
+                    "value": "0xdfd8bbdf"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xbfb00000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000033c0",
+                    "instr": "beq $26, $31, 282"
+                },
+                "e": {
+                    "pc": "0x000033bc",
+                    "instr": "ori $31, $26, 0x53e2"
+                },
+                "m": {
+                    "pc": "0x000033b8",
+                    "instr": "sub $26, $25, $31"
+                },
+                "w": {
+                    "pc": "0x000033b4",
+                    "instr": "lui $1, 0xffff"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 26,
+                "old": {
+                    "stage": "d",
+                    "value": "0xdfd8bbdf"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xbfb00000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000033c0",
+                    "instr": "beq $26, $31, 282"
+                },
+                "e": {
+                    "pc": "0x000033bc",
+                    "instr": "ori $31, $26, 0x53e2"
+                },
+                "m": {
+                    "pc": "0x000033b8",
+                    "instr": "sub $26, $25, $31"
+                },
+                "w": {
+                    "pc": "0x000033b4",
+                    "instr": "lui $1, 0xffff"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 26,
+                "old": {
+                    "stage": "d",
+                    "value": "0xdfd8bbdf"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0xbfb00000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000033c0",
+                    "instr": "beq $26, $31, 282"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x000033bc",
+                    "instr": "ori $31, $26, 0x53e2"
+                },
+                "w": {
+                    "pc": "0x000033b8",
+                    "instr": "sub $26, $25, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x60780000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xbfb053e2"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000033c0",
+                    "instr": "beq $26, $31, 282"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x000033bc",
+                    "instr": "ori $31, $26, 0x53e2"
+                },
+                "w": {
+                    "pc": "0x000033b8",
+                    "instr": "sub $26, $25, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000033d0"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003834",
+                    "instr": "ori $31, $31, 0x33cc"
+                },
+                "e": {
+                    "pc": "0x000033cc",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x000033c8",
+                    "instr": "jal 0x#0003834"
+                },
+                "w": {
+                    "pc": "0x000033c4",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x000033cc"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003838",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003834",
+                    "instr": "ori $31, $31, 0x33cc"
+                },
+                "w": {
+                    "pc": "0x000033cc",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 25,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x0000357b"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000033f0",
+                    "instr": "jal 0x#0003850"
+                },
+                "e": {
+                    "pc": "0x000033ec",
+                    "instr": "add $25, $31, $25"
+                },
+                "m": {
+                    "pc": "0x000033e8",
+                    "instr": "ori $25, $31, 0x357b"
+                },
+                "w": {
+                    "pc": "0x000033e4",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x000033f8"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000033f4",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x000033f0",
+                    "instr": "jal 0x#0003850"
+                },
+                "m": {
+                    "pc": "0x000033ec",
+                    "instr": "add $25, $31, $25"
+                },
+                "w": {
+                    "pc": "0x000033e8",
+                    "instr": "ori $25, $31, 0x357b"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 8,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003400",
+                    "instr": "sll $0, $0, 0"
+                },
+                "e": {
+                    "pc": "0x000033fc",
+                    "instr": "ori $9, $8, 0xc059"
+                },
+                "m": {
+                    "pc": "0x000033f8",
+                    "instr": "sub $8, $9, $9"
+                },
+                "w": {
+                    "pc": "0x00003858",
+                    "instr": "sw $31, 48($9)"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "e",
+                    "value": "0x000033f8"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000341c",
+                    "instr": "sll $0, $0, 0"
+                },
+                "e": {
+                    "pc": "0x00003418",
+                    "instr": "ori $31, $31, 0xb62b"
+                },
+                "m": {
+                    "pc": "0x00003414",
+                    "instr": "sub $31, $8, $8"
+                },
+                "w": {
+                    "pc": "0x00003410",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x0000b62b"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003420",
+                    "instr": "beq $31, $9, 270"
+                },
+                "e": {
+                    "pc": "0x0000341c",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x00003418",
+                    "instr": "ori $31, $31, 0xb62b"
+                },
+                "w": {
+                    "pc": "0x00003414",
+                    "instr": "sub $31, $8, $8"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 10,
+                "old": {
+                    "stage": "e",
+                    "value": "0xcf7c0000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x09787fc6"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003434",
+                    "instr": "lui $9, 0x27e6"
+                },
+                "e": {
+                    "pc": "0x00003430",
+                    "instr": "sub $31, $8, $10"
+                },
+                "m": {
+                    "pc": "0x0000342c",
+                    "instr": "ori $10, $9, 0x7fc6"
+                },
+                "w": {
+                    "pc": "0x00003428",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 10,
+                "old": {
+                    "stage": "d",
+                    "value": "0xcf7c0000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x09787fc6"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003438",
+                    "instr": "sub $8, $10, $8"
+                },
+                "e": {
+                    "pc": "0x00003434",
+                    "instr": "lui $9, 0x27e6"
+                },
+                "m": {
+                    "pc": "0x00003430",
+                    "instr": "sub $31, $8, $10"
+                },
+                "w": {
+                    "pc": "0x0000342c",
+                    "instr": "ori $10, $9, 0x7fc6"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0xf687803a"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003448"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003444",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x00003440",
+                    "instr": "jal 0x#0003864"
+                },
+                "m": {
+                    "pc": "0x0000343c",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x00003438",
+                    "instr": "sub $8, $10, $8"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003878",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x00003454",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003450",
+                    "instr": "jal 0x#0003878"
+                },
+                "w": {
+                    "pc": "0x00003874",
+                    "instr": "sub $9, $8, $8"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003448"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00003458"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000387c",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x00003878",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x00003454",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003450",
+                    "instr": "jal 0x#0003878"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003454"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x12f0ff8c"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000346c",
+                    "instr": "sub $8, $8, $31"
+                },
+                "e": {
+                    "pc": "0x00003468",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x00003464",
+                    "instr": "beq $8, $9, 264"
+                },
+                "w": {
+                    "pc": "0x00003460",
+                    "instr": "add $31, $8, $8"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 8,
+                "old": {
+                    "stage": "d",
+                    "value": "0xf687803a"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xae0b0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003478",
+                    "instr": "beq $8, $9, 261"
+                },
+                "e": {
+                    "pc": "0x00003474",
+                    "instr": "lui $8, 0xae0b"
+                },
+                "m": {
+                    "pc": "0x00003470",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x0000346c",
+                    "instr": "sub $8, $8, $31"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000038a0",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x00003494",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003490",
+                    "instr": "jal 0x#00038a0"
+                },
+                "w": {
+                    "pc": "0x0000348c",
+                    "instr": "sub $31, $8, $9"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x89a2803a"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00003498"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000038a4",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x000038a0",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x00003494",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003490",
+                    "instr": "jal 0x#00038a0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 10,
+                "old": {
+                    "stage": "d",
+                    "value": "0x2db40000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0xdbbf0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000034a4",
+                    "instr": "ori $31, $10, 0x22c2"
+                },
+                "e": {
+                    "pc": "0x000034a0",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x0000349c",
+                    "instr": "beq $31, $8, 260"
+                },
+                "w": {
+                    "pc": "0x00003498",
+                    "instr": "add $10, $10, $8"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003494"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0xdbbf22c2"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000034a8",
+                    "instr": "beq $31, $10, 259"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x000034a4",
+                    "instr": "ori $31, $10, 0x22c2"
+                },
+                "w": {
+                    "pc": "0x000034a0",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0xdbbf22c2"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x000034b8"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000034b4",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x000034b0",
+                    "instr": "jal 0x#00038c0"
+                },
+                "m": {
+                    "pc": "0x000034ac",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x000034a8",
+                    "instr": "beq $31, $10, 259"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000034cc"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000038d4",
+                    "instr": "ori $31, $31, 0x34c8"
+                },
+                "e": {
+                    "pc": "0x000034c8",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x000034c4",
+                    "instr": "jal 0x#00038d4"
+                },
+                "w": {
+                    "pc": "0x000034c0",
+                    "instr": "lui $9, 0x3329"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x000034c8"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000038d8",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x000038d4",
+                    "instr": "ori $31, $31, 0x34c8"
+                },
+                "w": {
+                    "pc": "0x000034c8",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x000034c8"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000038dc",
+                    "instr": "add $10, $31, $8"
+                },
+                "e": {
+                    "pc": "0x000038d8",
+                    "instr": "jr $31"
+                },
+                "m": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "w": {
+                    "pc": "0x000038d4",
+                    "instr": "ori $31, $31, 0x34c8"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000034c8"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000034cc",
+                    "instr": "ori $31, $31, 0x63ac"
+                },
+                "e": {
+                    "pc": "0x000034c8",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x000038dc",
+                    "instr": "add $10, $31, $8"
+                },
+                "w": {
+                    "pc": "0x000038d8",
+                    "instr": "jr $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 10,
+                "old": {
+                    "stage": "d",
+                    "value": "0xdbbf0000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x8b6434c8"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000034d0",
+                    "instr": "ori $9, $10, 0x3568"
+                },
+                "e": {
+                    "pc": "0x000034cc",
+                    "instr": "ori $31, $31, 0x63ac"
+                },
+                "m": {
+                    "pc": "0x000034c8",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x000038dc",
+                    "instr": "add $10, $31, $8"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x000063ac"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000034d4",
+                    "instr": "beq $10, $31, 258"
+                },
+                "e": {
+                    "pc": "0x000034d0",
+                    "instr": "ori $9, $10, 0x3568"
+                },
+                "m": {
+                    "pc": "0x000034cc",
+                    "instr": "ori $31, $31, 0x63ac"
+                },
+                "w": {
+                    "pc": "0x000034c8",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 13,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000350c",
+                    "instr": "sub $31, $14, $13"
+                },
+                "e": {
+                    "pc": "0x00003508",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x00003504",
+                    "instr": "add $13, $14, $14"
+                },
+                "w": {
+                    "pc": "0x00003500",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003900",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x00003524",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x00003520",
+                    "instr": "jal 0x#0003900"
+                },
+                "w": {
+                    "pc": "0x000038fc",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00003528"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003904",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x00003900",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x00003524",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003520",
+                    "instr": "jal 0x#0003900"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003528"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00003524"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000390c",
+                    "instr": "add $14, $14, $31"
+                },
+                "e": {
+                    "pc": "0x00003908",
+                    "instr": "jr $31"
+                },
+                "m": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "w": {
+                    "pc": "0x00003904",
+                    "instr": "add $31, $1, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003524"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003530"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000352c",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x00003528",
+                    "instr": "jal 0x#0003910"
+                },
+                "m": {
+                    "pc": "0x00003524",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x0000390c",
+                    "instr": "add $14, $14, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 14,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003524"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00003530"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003530",
+                    "instr": "beq $14, $13, 250"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003918",
+                    "instr": "sub $14, $31, $13"
+                },
+                "w": {
+                    "pc": "0x00003914",
+                    "instr": "jr $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003548"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003924",
+                    "instr": "ori $31, $31, 0x3544"
+                },
+                "e": {
+                    "pc": "0x00003544",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x00003540",
+                    "instr": "jal 0x#0003924"
+                },
+                "w": {
+                    "pc": "0x0000353c",
+                    "instr": "lui $14, 0x56cc"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00003544"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003928",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003924",
+                    "instr": "ori $31, $31, 0x3544"
+                },
+                "w": {
+                    "pc": "0x00003544",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003544"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003550",
+                    "instr": "add $14, $13, $31"
+                },
+                "e": {
+                    "pc": "0x0000354c",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x00003548",
+                    "instr": "beq $13, $15, 249"
+                },
+                "w": {
+                    "pc": "0x00003544",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003564"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003560",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x0000355c",
+                    "instr": "jal 0x#0003938"
+                },
+                "m": {
+                    "pc": "0x00003558",
+                    "instr": "lui $14, 0x45af"
+                },
+                "w": {
+                    "pc": "0x00003554",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0000356c"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003944",
+                    "instr": "ori $31, $31, 0x3568"
+                },
+                "e": {
+                    "pc": "0x00003568",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x00003564",
+                    "instr": "jal 0x#0003944"
+                },
+                "w": {
+                    "pc": "0x00003940",
+                    "instr": "add $15, $31, $13"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00003568"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003948",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003944",
+                    "instr": "ori $31, $31, 0x3568"
+                },
+                "w": {
+                    "pc": "0x00003568",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 14,
+                "old": {
+                    "stage": "e",
+                    "value": "0x45af0000"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003570",
+                    "instr": "ori $15, $13, 0xe0cc"
+                },
+                "e": {
+                    "pc": "0x0000356c",
+                    "instr": "sub $31, $14, $14"
+                },
+                "m": {
+                    "pc": "0x00003568",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x0000394c",
+                    "instr": "lw $14, 1912($13)"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 15,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00003564"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x0000e0cc"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003578",
+                    "instr": "sll $0, $0, 0"
+                },
+                "e": {
+                    "pc": "0x00003574",
+                    "instr": "sub $13, $15, $14"
+                },
+                "m": {
+                    "pc": "0x00003570",
+                    "instr": "ori $15, $13, 0xe0cc"
+                },
+                "w": {
+                    "pc": "0x0000356c",
+                    "instr": "sub $31, $14, $14"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 15,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00003564"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x0000e0cc"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000357c",
+                    "instr": "beq $15, $13, 244"
+                },
+                "e": {
+                    "pc": "0x00003578",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x00003574",
+                    "instr": "sub $13, $15, $14"
+                },
+                "w": {
+                    "pc": "0x00003570",
+                    "instr": "ori $15, $13, 0xe0cc"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 13,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x0000e0cc"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000357c",
+                    "instr": "beq $15, $13, 244"
+                },
+                "e": {
+                    "pc": "0x00003578",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x00003574",
+                    "instr": "sub $13, $15, $14"
+                },
+                "w": {
+                    "pc": "0x00003570",
+                    "instr": "ori $15, $13, 0xe0cc"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00003594"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003590",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x0000358c",
+                    "instr": "jal 0x#0003958"
+                },
+                "m": {
+                    "pc": "0x00003588",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x00003584",
+                    "instr": "lui $14, 0x1f00"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00006b28"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x22650000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000359c",
+                    "instr": "ori $14, $31, 0xe5cf"
+                },
+                "e": {
+                    "pc": "0x00003598",
+                    "instr": "lui $31, 0x2265"
+                },
+                "m": {
+                    "pc": "0x00003594",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x00003960",
+                    "instr": "add $31, $31, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 13,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0000e0cc"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x0000f0dd"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000035ac",
+                    "instr": "ori $31, $13, 0xee36"
+                },
+                "e": {
+                    "pc": "0x000035a8",
+                    "instr": "sll $0, $0, 0"
+                },
+                "m": {
+                    "pc": "0x000035a4",
+                    "instr": "ori $13, $15, 0x70dd"
+                },
+                "w": {
+                    "pc": "0x000035a0",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 13,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0000e0cc"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x0000f0dd"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000035b0",
+                    "instr": "sub $15, $13, $31"
+                },
+                "e": {
+                    "pc": "0x000035ac",
+                    "instr": "ori $31, $13, 0xee36"
+                },
+                "m": {
+                    "pc": "0x000035a8",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x000035a4",
+                    "instr": "ori $13, $15, 0x70dd"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "e",
+                    "value": "0x22650000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x0000feff"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000035b4",
+                    "instr": "jal 0x#0003964"
+                },
+                "e": {
+                    "pc": "0x000035b0",
+                    "instr": "sub $15, $13, $31"
+                },
+                "m": {
+                    "pc": "0x000035ac",
+                    "instr": "ori $31, $13, 0xee36"
+                },
+                "w": {
+                    "pc": "0x000035a8",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": false,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "d",
+                    "value": "0xffff0000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0xffff0000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003964",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "e": {
+                    "pc": "0x000035b8",
+                    "instr": "lui $1, 0xffff"
+                },
+                "m": {
+                    "pc": "0x000035b4",
+                    "instr": "jal 0x#0003964"
+                },
+                "w": {
+                    "pc": "0x000035b0",
+                    "instr": "sub $15, $13, $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x0000feff"
+                },
+                "new": {
+                    "stage": "w",
+                    "value": "0x000035bc"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003968",
+                    "instr": "add $31, $1, $31"
+                },
+                "e": {
+                    "pc": "0x00003964",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "m": {
+                    "pc": "0x000035b8",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x000035b4",
+                    "instr": "jal 0x#0003964"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000035b8"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x000035c4"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000035c0",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x000035bc",
+                    "instr": "jal 0x#0003974"
+                },
+                "m": {
+                    "pc": "0x000035b8",
+                    "instr": "lui $1, 0xffff"
+                },
+                "w": {
+                    "pc": "0x00003970",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000035d8"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003988",
+                    "instr": "ori $31, $31, 0x35d4"
+                },
+                "e": {
+                    "pc": "0x000035d4",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x000035d0",
+                    "instr": "jal 0x#0003988"
+                },
+                "w": {
+                    "pc": "0x000035cc",
+                    "instr": "ori $13, $14, 0x2c67"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x000035d4"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x0000398c",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003988",
+                    "instr": "ori $31, $31, 0x35d4"
+                },
+                "w": {
+                    "pc": "0x000035d4",
+                    "instr": "lui $31, 0x0000"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x000035d4"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000035d8",
+                    "instr": "beq $14, $31, 238"
+                },
+                "e": {
+                    "pc": "0x000035d4",
+                    "instr": "lui $31, 0x0000"
+                },
+                "m": {
+                    "pc": "0x00003990",
+                    "instr": "add $13, $14, $13"
+                },
+                "w": {
+                    "pc": "0x0000398c",
+                    "instr": "jr $31"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 31,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "e",
+                    "value": "0x000035f0"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x000035ec",
+                    "instr": "sw $31, 0($0)"
+                },
+                "e": {
+                    "pc": "0x000035e8",
+                    "instr": "jal 0x#00039a4"
+                },
+                "m": {
+                    "pc": "0x000035e4",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x000035e0",
+                    "instr": "beq $13, $15, 238"
+                }
+            }
+        }
+    ],
+    "stalling": [
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003620",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x0000361c",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x00003028",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x00003024",
+                    "instr": "jal 0x#000361c"
+                }
+            }
+        },
+        {
+            "cause": "m",
+            "view": {
+                "d": {
+                    "pc": "0x00003620",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x0000361c",
+                    "instr": "lw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x00003028",
+                    "instr": "sw $31, 0($0)"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003630",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x0000362c",
+                    "instr": "add $31, $1, $31"
+                },
+                "m": {
+                    "pc": "0x00003628",
+                    "instr": "ori $1, $1, 0xfffc"
+                },
+                "w": {
+                    "pc": "0x00003038",
+                    "instr": "lui $1, 0xffff"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x0000363c",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003638",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x00003064",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x00003060",
+                    "instr": "jal 0x#0003638"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003678",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003674",
+                    "instr": "ori $31, $31, 0x30cc"
+                },
+                "m": {
+                    "pc": "0x000030cc",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x000030c8",
+                    "instr": "jal 0x#0003674"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x0000369c",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003698",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x000030f4",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x000030f0",
+                    "instr": "jal 0x#0003698"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003164",
+                    "instr": "beq $31, $24, 347"
+                },
+                "e": {
+                    "pc": "0x00003160",
+                    "instr": "ori $31, $25, 0x8469"
+                },
+                "m": {
+                    "pc": "0x0000315c",
+                    "instr": "ori $26, $26, 0x7f9c"
+                },
+                "w": {
+                    "pc": "0x00003158",
+                    "instr": "add $31, $26, $31"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000036e0",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x000036dc",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x00003184",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x00003180",
+                    "instr": "jal 0x#00036dc"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003190",
+                    "instr": "beq $24, $25, 343"
+                },
+                "e": {
+                    "pc": "0x000036ec",
+                    "instr": "ori $25, $24, 0x7460"
+                },
+                "m": {
+                    "pc": "0x000036e8",
+                    "instr": "beq $24, $24, -343"
+                },
+                "w": {
+                    "pc": "0x0000318c",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000036fc",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x000036f8",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x000031a0",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x0000319c",
+                    "instr": "jal 0x#00036f8"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003204",
+                    "instr": "beq $31, $11, 325"
+                },
+                "e": {
+                    "pc": "0x00003200",
+                    "instr": "sub $31, $31, $11"
+                },
+                "m": {
+                    "pc": "0x000031fc",
+                    "instr": "lui $11, 0xaf60"
+                },
+                "w": {
+                    "pc": "0x000031f8",
+                    "instr": "sll $0, $0, 0"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003738",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003734",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x00003230",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x0000322c",
+                    "instr": "jal 0x#0003734"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003744",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003740",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x00003248",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x00003244",
+                    "instr": "jal 0x#0003740"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003750",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x0000374c",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x00003254",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x00003250",
+                    "instr": "jal 0x#000374c"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x0000377c",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003778",
+                    "instr": "ori $31, $31, 0x3290"
+                },
+                "m": {
+                    "pc": "0x00003290",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x0000328c",
+                    "instr": "jal 0x#0003778"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003798",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003794",
+                    "instr": "ori $31, $31, 0x32f0"
+                },
+                "m": {
+                    "pc": "0x000032f0",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x000032ec",
+                    "instr": "jal 0x#0003794"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000037a4",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x000037a0",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x000032fc",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x000032f8",
+                    "instr": "jal 0x#00037a0"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000037b0",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x000037ac",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x00003314",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x00003310",
+                    "instr": "jal 0x#00037ac"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000037cc",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x000037c8",
+                    "instr": "ori $31, $31, 0x3330"
+                },
+                "m": {
+                    "pc": "0x00003330",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x0000332c",
+                    "instr": "jal 0x#00037c8"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000037e0",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x000037dc",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x0000335c",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x00003358",
+                    "instr": "jal 0x#00037dc"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003814",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003810",
+                    "instr": "ori $31, $31, 0x33ac"
+                },
+                "m": {
+                    "pc": "0x000033ac",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x000033a8",
+                    "instr": "jal 0x#0003810"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000033c0",
+                    "instr": "beq $26, $31, 282"
+                },
+                "e": {
+                    "pc": "0x000033bc",
+                    "instr": "ori $31, $26, 0x53e2"
+                },
+                "m": {
+                    "pc": "0x000033b8",
+                    "instr": "sub $26, $25, $31"
+                },
+                "w": {
+                    "pc": "0x000033b4",
+                    "instr": "lui $1, 0xffff"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003838",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003834",
+                    "instr": "ori $31, $31, 0x33cc"
+                },
+                "m": {
+                    "pc": "0x000033cc",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x000033c8",
+                    "instr": "jal 0x#0003834"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003854",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003850",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x000033f4",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x000033f0",
+                    "instr": "jal 0x#0003850"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003868",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003864",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x00003444",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x00003440",
+                    "instr": "jal 0x#0003864"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000034a8",
+                    "instr": "beq $31, $10, 259"
+                },
+                "e": {
+                    "pc": "0x000034a4",
+                    "instr": "ori $31, $10, 0x22c2"
+                },
+                "m": {
+                    "pc": "0x000034a0",
+                    "instr": "sll $0, $0, 0"
+                },
+                "w": {
+                    "pc": "0x0000349c",
+                    "instr": "beq $31, $8, 260"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000038c4",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x000038c0",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x000034b4",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x000034b0",
+                    "instr": "jal 0x#00038c0"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000038d8",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x000038d4",
+                    "instr": "ori $31, $31, 0x34c8"
+                },
+                "m": {
+                    "pc": "0x000034c8",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x000034c4",
+                    "instr": "jal 0x#00038d4"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003914",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003910",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x0000352c",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x00003528",
+                    "instr": "jal 0x#0003910"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003530",
+                    "instr": "beq $14, $13, 250"
+                },
+                "e": {
+                    "pc": "0x00003918",
+                    "instr": "sub $14, $31, $13"
+                },
+                "m": {
+                    "pc": "0x00003914",
+                    "instr": "jr $31"
+                },
+                "w": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003928",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003924",
+                    "instr": "ori $31, $31, 0x3544"
+                },
+                "m": {
+                    "pc": "0x00003544",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x00003540",
+                    "instr": "jal 0x#0003924"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x0000393c",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003938",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x00003560",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x0000355c",
+                    "instr": "jal 0x#0003938"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003948",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003944",
+                    "instr": "ori $31, $31, 0x3568"
+                },
+                "m": {
+                    "pc": "0x00003568",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x00003564",
+                    "instr": "jal 0x#0003944"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x0000395c",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003958",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x00003590",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x0000358c",
+                    "instr": "jal 0x#0003958"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003978",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003974",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x000035c0",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x000035bc",
+                    "instr": "jal 0x#0003974"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x0000398c",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x00003988",
+                    "instr": "ori $31, $31, 0x35d4"
+                },
+                "m": {
+                    "pc": "0x000035d4",
+                    "instr": "lui $31, 0x0000"
+                },
+                "w": {
+                    "pc": "0x000035d0",
+                    "instr": "jal 0x#0003988"
+                }
+            }
+        },
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x000039a8",
+                    "instr": "jr $31"
+                },
+                "e": {
+                    "pc": "0x000039a4",
+                    "instr": "lw $31, 0($0)"
+                },
+                "m": {
+                    "pc": "0x000035ec",
+                    "instr": "sw $31, 0($0)"
+                },
+                "w": {
+                    "pc": "0x000035e8",
+                    "instr": "jal 0x#00039a4"
+                }
+            }
+        }
+    ]
+}
