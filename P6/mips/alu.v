@@ -28,7 +28,7 @@ module alu(
 	 wire sltu = (A < B) ? 32'd1 : 32'd0;
 	 wire sign_cmp = $signed(A) < $signed(B);
 	 wire slt = sign_cmp ? 32'd1 : 32'd0;
-    assign C = (ALUOp == `ALU_ADD) ? A + B :
+    assign C = (ALUOp == `ALU_ADD | ALUOp == `ALU_ADDI) ? A + B :
                (ALUOp == `ALU_SUB) ? A - B :
                (ALUOp == `ALU_ORI | ALUOp == `ALU_OR) ? A | B :
 					(ALUOp == `ALU_AND | ALUOp == `ALU_ANDI) ? A & B :

@@ -21,7 +21,7 @@
 `include "head.v"
 module dmext(
     input [1:0] addr,
-    input [1:0] Sel,
+    input [2:0] Sel,
     input [31:0] data,
     output [31:0] dmrd
     );

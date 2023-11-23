@@ -41,7 +41,7 @@ module em_reg(
             M_ALUO <= 32'b0;
             M_PC8 <= 32'b0;
             M_rt <= 32'b0;
-				M_HL <= 32'b0;
+			M_HL <= 32'b0;
         end
         else begin
             M_PC <= E_PC;
@@ -49,7 +49,7 @@ module em_reg(
             M_ALUO <= E_ALUO;
             M_PC8 <= E_PC8;
             M_rt <= E_rt;
-				M_HL <= E_HL;
+			M_HL <= E_HL;
         end
     end
 

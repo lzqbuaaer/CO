@@ -21,7 +21,7 @@
 `include "head.v"
 module dmen(
     output [3:0] byteen,
-    input [1:0] ENSel,
+    input [2:0] ENSel,
     input [1:0] addr
     );
     assign byteen = (ENSel == `DMEN_OTH) ? 4'b0000 :

@@ -22,7 +22,7 @@
 module mudi(
     input [31:0] A,
     input [31:0] B,
-    input [1:0] MDOp,
+    input [2:0] MDOp,
     input Start,
     input clk,
     input rst,
@@ -38,6 +38,12 @@ module mudi(
             LO <= 32'b0;
             HI <= 32'b0;
             cnt <= 4'b0;
+        end
+        else if(MDOp == `MUDI_MTHI) begin
+            HI <= A;
+        end
+        else if(MDOp == `MUDI_MTLO) begin
+            LO <= A;
         end
         else begin
             if(cnt == 0) begin

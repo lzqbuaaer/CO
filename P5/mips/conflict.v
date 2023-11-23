@@ -70,7 +70,7 @@ module conflict(
     assign D_rt_Tuse = (D_intr == `SW) ? 2 : 
                        (D_intr == `BEQ) ? 0 : 1;
     assign E_rs_Tuse = 0;
-    assign E_rt_Tuse = (D_intr == `SW) ? 1 : 0;
+    assign E_rt_Tuse = (E_intr == `SW) ? 1 : 0;
     assign M_rt_Tuse = 0;
 
     //block

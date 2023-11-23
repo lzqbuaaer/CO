@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.38 secs
  
 --> Parameter xsthdpdir set to D:/lzq123/co/P6/mips/xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.38 secs
  
 --> Reading design: mudi.prj
 
@@ -44,8 +44,8 @@ Parsing verilog file "head.v" included at line 21.
 Parsing module <mudi>.
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 1.86 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.74 secs
  
 --> 
 
