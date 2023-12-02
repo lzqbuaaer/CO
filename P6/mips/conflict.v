@@ -24,6 +24,8 @@ module conflict(
     input [31:0] E_IR,
     input [31:0] M_IR,
     input [31:0] W_IR,
+	 input busy,
+	 input start,
     output Stall,
     output [1:0] FW_D_rs,
     output [1:0] FW_D_rt,
@@ -78,7 +80,8 @@ module conflict(
     wire M_stall_rt = (M_Tnew > D_rt_Tuse) && (D_A2 == M_A3) && (D_A2 != 0);
     wire E_stall_rs = (E_Tnew > D_rs_Tuse) && (D_A1 == E_A3) && (D_A1 != 0);
     wire E_stall_rt = (E_Tnew > D_rt_Tuse) && (D_A2 == E_A3) && (D_A2 != 0);
-    assign Stall = M_stall_rs | M_stall_rt | E_stall_rs | E_stall_rt;
+	 wire MD_stall = (busy | start) && (D_intr == `MULT | D_intr == `MULTU | D_intr == `DIV | D_intr == `DIVU | D_intr == `MFLO | D_intr == `MFHI | D_intr == `MTLO | D_intr == `MTHI);
+    assign Stall = M_stall_rs | M_stall_rt | E_stall_rs | E_stall_rt | MD_stall;
 
     //forward
     assign FW_M_rt = (W_Tnew == 0) && (W_A3 == M_A2) && (M_A2 != 0);

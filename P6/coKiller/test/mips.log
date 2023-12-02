@@ -1,0 +1,64 @@
+Running: D:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -nodebug -prj mips.prj -o mips.exe generated_mips_test 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 20
+Turning on mult-threading, number of parallel sub-compilation jobs: 40 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/alu.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/bridge.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/cmp.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/conflict.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/control.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/cp0.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/cpu.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/decode.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/de_reg.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/dmen.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/dmext.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/dmwd.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/em_reg.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/ext.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/fd_reg.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/generated_mips_test.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/grf.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/head.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/mips.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/mips_tb.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/mudi.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/mw_reg.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/npc.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/P7_standard_timer_2019.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P6\coKiller\test/pc.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module control
+Compiling module decode
+Compiling module conflict
+Compiling module pc
+Compiling module fd_reg
+Compiling module npc
+Compiling module grf
+Compiling module ext
+Compiling module cmp
+Compiling module de_reg
+Compiling module alu
+Compiling module mudi
+Compiling module em_reg
+Compiling module dmwd
+Compiling module dmen
+Compiling module dmext
+Compiling module cp0
+Compiling module mw_reg
+Compiling module cpu
+Compiling module bridge
+Compiling module TC
+Compiling module mips
+Compiling module generated_mips_test
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 23 Verilog Units
+Built simulation executable mips.exe
+Fuse Memory Usage: 33532 KB
+Fuse CPU Usage: 124 ms
+Warning: VC++ 2008 runtime libraries are not installed.
+Please install the runtime libraries by running the redistributable {Install Root Dir}\common\bin\nt64\vcredist_x64.exe from the installed area.
+You will need to have adminstrative privilege to run VC++ 2008 Redistributable.

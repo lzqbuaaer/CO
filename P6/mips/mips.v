@@ -133,9 +133,9 @@ module mips(
     
     //Stall
     wire Stall;
-    assign F_PC_en = (Stall | E_Start | E_Busy);
-    assign FD_en = (Stall | E_Start | E_Busy);
-    assign DE_rst = (Stall | reset | E_Start | E_Busy);
+    assign F_PC_en = (Stall);
+    assign FD_en = (Stall);
+    assign DE_rst = (Stall | reset);
     //forward
     wire [31:0] W_FD = W_RFWD;
     wire [31:0] M_FD = M_RFWD;
@@ -189,6 +189,8 @@ module mips(
         .E_IR(E_IR),
         .M_IR(M_IR),
         .W_IR(W_IR),
+		  .busy(E_Busy),
+		  .start(E_Start),
         .Stall(Stall),
         .FW_D_rs(FWSel_D_rs),
         .FW_D_rt(FWSel_D_rt),

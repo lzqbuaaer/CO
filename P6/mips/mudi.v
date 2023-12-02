@@ -38,6 +38,7 @@ module mudi(
             LO <= 32'b0;
             HI <= 32'b0;
             cnt <= 4'b0;
+				Busy <= 1'b0;
         end
         else if(MDOp == `MUDI_MTHI) begin
             HI <= A;

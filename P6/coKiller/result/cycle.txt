@@ -1,0 +1,5 @@
+standard pipeline-cycle: 3116
+    slow pipeline-cycle: 4772
+   accepted cycle range: [2784, 4275]
+
+your cycle: 1978

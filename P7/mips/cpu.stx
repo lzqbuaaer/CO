@@ -1,0 +1,104 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/lzq123/co/P7/mips/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to D:/lzq123/co/P7/mips/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: cpu.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\lzq123\co\P7\mips\decode.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <decode>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\pc.v" into library work
+Parsing module <pc>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\npc.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <npc>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\mw_reg.v" into library work
+Parsing module <mw_reg>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\mudi.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <mudi>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\grf.v" into library work
+Parsing module <grf>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\fd_reg.v" into library work
+Parsing module <fd_reg>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\ext.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <ext>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\em_reg.v" into library work
+Parsing module <em_reg>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\dmwd.v" into library work
+Parsing module <dmwd>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\dmext.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <dmext>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\dmen.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <dmen>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\de_reg.v" into library work
+Parsing module <de_reg>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\cp0.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <cp0>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\control.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <control>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\conflict.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <conflict>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\cmp.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <cmp>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\alu.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <alu>.
+Analyzing Verilog file "D:\lzq123\co\P7\mips\cpu.v" into library work
+Parsing verilog file "head.v" included at line 21.
+Parsing module <cpu>.
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.91 secs
+ 
+--> 
+
+Total memory usage is 4463472 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
