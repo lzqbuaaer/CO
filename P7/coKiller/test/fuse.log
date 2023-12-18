@@ -1,0 +1,69 @@
+Running: D:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -nodebug -prj mips.prj -o mips.exe generated_mips_test 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 20
+Turning on mult-threading, number of parallel sub-compilation jobs: 40 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/bridge.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/const.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/control.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/cp0.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/cpu.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/d_cmp.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/d_ext.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/d_grf.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/d_npc.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/D_reg.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/e_alu.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/e_MDU.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/E_reg.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/f_ifu.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/generated_mips_test.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/mips.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/mips_tb.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/MUX.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/m_byte_ext.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/m_data_ext.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/M_reg.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/Rcontrol.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/tc.v" into library work
+Analyzing Verilog file "D:\lzq123\co\P7\coKiller\test/W_reg.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "D:\lzq123\co\P7\coKiller\test/generated_mips_test.v" Line 49: Size mismatch in connection of port <w_grf_addr>. Formal port size is 32-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P7\coKiller\test/cpu.v" Line 378: Port src3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P7\coKiller\test/cpu.v" Line 386: Port src3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P7\coKiller\test/cpu.v" Line 465: Port src2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P7\coKiller\test/cpu.v" Line 472: Port src3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P7\coKiller\test/cpu.v" Line 480: Port src3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P7\coKiller\test/cpu.v" Line 488: Port src2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P7\coKiller\test/cpu.v" Line 495: Port lsOp_E is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P7\coKiller\test/cpu.v" Line 518: Port src2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P7\coKiller\test/cpu.v" Line 579: Port src2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\lzq123\co\P7\coKiller\test/cpu.v" Line 586: Port src2 is not connected to this instance
+Completed static elaboration
+Compiling module Rcontrol
+Compiling module f_ifu
+Compiling module D_reg
+Compiling module control
+Compiling module d_npc
+Compiling module d_grf
+Compiling module d_ext
+Compiling module MUX
+Compiling module d_cmp
+Compiling module E_reg
+Compiling module e_alu
+Compiling module e_MDU
+Compiling module M_reg
+Compiling module m_byte_ext
+Compiling module m_data_ext
+Compiling module cp0
+Compiling module W_reg
+Compiling module cpu
+Compiling module bridge
+Compiling module TC
+Compiling module mips
+Compiling module generated_mips_test
+Time Resolution for simulation is 1ps.
+Compiled 22 Verilog Units
+Built simulation executable mips.exe
+Fuse Memory Usage: 34376 KB
+Fuse CPU Usage: 93 ms

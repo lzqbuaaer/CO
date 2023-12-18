@@ -1,0 +1,28 @@
+Command line:
+   mudi_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52104
+
+Sun Dec 10 01:07:31 2023
+
+
+ Elaboration Time: 0 sec
+
+ Current Memory Usage: 5171.39 Meg
+
+ Total Signals          : 20
+ Total Nets             : 149
+ Total Signal Drivers   : 8
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 10
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 362
+
+ Total Simulation Time: 0 sec
+
+ Current Memory Usage: 5485.97 Meg
+
+Sun Dec 10 01:08:23 2023
+

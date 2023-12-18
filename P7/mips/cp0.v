@@ -46,7 +46,7 @@ module cp0(
     wire IntReq = ((HWInt & `IM) != 0) & !`EXL & `IE;
     wire ExcReq = (ExcCodeIn != 0) & !`EXL;
     assign Req = IntReq | ExcReq;
-    wire [31:2] EPCIn = BDIn ? (VPC[31:2] - 1) : VPC[31:2];
+    wire [31:0] EPCIn = BDIn ? (VPC - 4) : VPC;
     assign EPCOut = EPC;
 
     always @(posedge clk ) begin
@@ -66,14 +66,22 @@ module cp0(
             if(Req) begin
                 `ExcCode <= IntReq ? 5'b0 : ExcCodeIn;
                 `EXL <= 1'b1;
-                EPC[31:2] <= EPCIn;
+                EPC <= EPCIn;
                 `BD <= BDIn;
                 IntResponse <= IntReq ? 1'b1 : 1'b0;
             end
             else if(en) begin
                 case (addr)
-                    12: SR <= in;
-                    13: Cause <= in;
+                    12: begin
+						      `IM <= in[15:10];
+								`EXL <= in[1];
+								`IE <= in[0];
+						  end
+                    13: begin
+						      `BD <= in[31];
+								`IP <= in[15:10];
+								`ExcCode <= in[6:2];
+						  end
                     14: EPC <= in; 
                     default: begin
                         SR <= SR;

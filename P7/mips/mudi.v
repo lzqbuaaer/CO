@@ -40,10 +40,10 @@ module mudi(
             HI <= 32'b0;
             cnt <= 4'b0;
         end
-        else if(MDOp == `MUDI_MTHI) begin
+        else if(MDOp == `MUDI_MTHI && !Req) begin
             HI <= A;
         end
-        else if(MDOp == `MUDI_MTLO) begin
+        else if(MDOp == `MUDI_MTLO && !Req) begin
             LO <= A;
         end
         else begin

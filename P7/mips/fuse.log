@@ -28,10 +28,10 @@ Analyzing Verilog file "D:/lzq123/co/P7/mips/mips.v" into library work
 Analyzing Verilog file "D:/lzq123/co/P7/mips/mips_tb.v" into library work
 Analyzing Verilog file "D:/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "D:/lzq123/co/P7/mips/cpu.v" Line 218: Port ALUOp is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/lzq123/co/P7/mips/cpu.v" Line 228: Port NPCOp is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/lzq123/co/P7/mips/cpu.v" Line 238: Port NPCOp is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/lzq123/co/P7/mips/cpu.v" Line 248: Port NPCOp is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/lzq123/co/P7/mips/cpu.v" Line 219: Port ALUOp is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/lzq123/co/P7/mips/cpu.v" Line 229: Port NPCOp is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/lzq123/co/P7/mips/cpu.v" Line 239: Port NPCOp is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/lzq123/co/P7/mips/cpu.v" Line 249: Port NPCOp is not connected to this instance
 Completed static elaboration
 Compiling module control
 Compiling module decode
@@ -58,7 +58,8 @@ Compiling module mips
 Compiling module mips_txt
 Compiling module glbl
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 24 Verilog Units
 Built simulation executable D:/lzq123/co/P7/mips/mips_txt_isim_beh.exe
-Fuse Memory Usage: 33672 KB
-Fuse CPU Usage: 124 ms
+Fuse Memory Usage: 33796 KB
+Fuse CPU Usage: 62 ms

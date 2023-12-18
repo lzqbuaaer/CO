@@ -49,8 +49,8 @@ module bridge(
     );
 
     assign DM_byteen = (addr >= 32'h00000000 && addr <= 32'h00002fff) ? byteen : 4'b0;
-    assign T1_byteen = (addr >= 32'h00007f00 && addr <= 32'h00007f0b);
-    assign T2_byteen = (addr >= 32'h00007f10 && addr <= 32'h00007f1b);
+    assign T1_byteen = (addr >= 32'h00007f00 && addr <= 32'h00007f0b) && (byteen != 0);
+    assign T2_byteen = (addr >= 32'h00007f10 && addr <= 32'h00007f1b) && (byteen != 0);
     assign Int_byteen = (addr >= 32'h00007f20 && addr <= 32'h00007f23) ? byteen : 4'b0;
 
     assign DM_addr = addr;

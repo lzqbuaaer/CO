@@ -159,7 +159,8 @@ module cpu(
     wire M_S_Align = (M_store == `isSW && m_data_addr[1:0] != 0) || (M_store == `isSH && m_data_addr[0]);
     wire M_S_OutRange = !((m_data_addr >= 32'h00000000 && m_data_addr <= 32'h00002fff) ||
                           (m_data_addr >= 32'h00007f00 && m_data_addr <= 32'h00007f0b) ||
-                          (m_data_addr >= 32'h00007f10 && m_data_addr <= 32'h00007f1b));
+                          (m_data_addr >= 32'h00007f10 && m_data_addr <= 32'h00007f1b) ||
+								  (m_data_addr >= 32'h00007f20 && m_data_addr <= 32'h00007f23));
     wire M_S_Timer = ((M_store == `isSH || M_store == `isSB) && m_data_addr >= 32'h00007f00) ||
                      (m_data_addr >= 32'h00007f08 && m_data_addr <= 32'h00007f0b) ||
                      (m_data_addr >= 32'h00007f18 && m_data_addr <= 32'h00007f1b);
@@ -167,7 +168,8 @@ module cpu(
     wire M_L_Align = (M_load == `isLW && m_data_addr[1:0] != 0) || (M_load == `isLH && m_data_addr[0]);
     wire M_L_OutRange = !((m_data_addr >= 32'h00000000 && m_data_addr <= 32'h00002fff) ||
                           (m_data_addr >= 32'h00007f00 && m_data_addr <= 32'h00007f0b) ||
-                          (m_data_addr >= 32'h00007f10 && m_data_addr <= 32'h00007f1b));
+                          (m_data_addr >= 32'h00007f10 && m_data_addr <= 32'h00007f1b) ||
+								  (m_data_addr >= 32'h00007f20 && m_data_addr <= 32'h00007f23));
     wire M_L_Timer = ((M_load == `isLH || M_load == `isLB) && m_data_addr >= 32'h00007f00);
     wire M_EXC_AdEL = (M_load != 0) && (M_EXC_DMOv || M_L_Align || M_L_OutRange || M_L_Timer);
 
@@ -187,8 +189,7 @@ module cpu(
     wire D_BD;
     wire E_BD;
     wire M_BD;   
-    assign m_data_byteen = (M_IntRespond && m_data_addr == 32'h00007f20) ? M_byteen :
-                           (Req) ? 4'b0 : M_byteen;
+    assign m_data_byteen = (Req) ? 4'b0 : M_byteen;
     //Stall
     wire Stall;
     assign F_PC_en = (Stall);

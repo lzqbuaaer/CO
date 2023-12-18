@@ -73,6 +73,7 @@ module mips_txt;
 
 	initial begin
 		$readmemh("code.txt", inst);
+
 		for (i = 0; i < 5120; i = i + 1) data[i] <= 0;
 	end
 
@@ -101,39 +102,6 @@ module mips_txt;
 		if (~reset) begin
 			if (w_grf_we && (w_grf_addr != 0)) begin
 				$display("%d@%h: $%d <= %h", $time, w_inst_addr, w_grf_addr, w_grf_wdata);
-			end
-		end
-	end
-
-	// ----------- For Interrupt -----------
-
-	wire [31:0] fixed_macroscopic_pc;
-
-	assign fixed_macroscopic_pc = macroscopic_pc & 32'hfffffffc;
-
-	parameter target_pc = 32'h00003010;
-
-	integer count;
-
-	initial begin
-		count = 0;
-	end
-
-	always @(negedge clk) begin
-		if (reset) begin
-			interrupt = 0;
-		end
-		else begin
-			if (interrupt) begin
-				if (|m_int_byteen && (m_int_addr & 32'hfffffffc) == 32'h7f20) begin
-					interrupt = 0;
-				end
-			end
-			else if (fixed_macroscopic_pc == target_pc) begin
-				if (count == 0) begin
-					count = 1;
-					interrupt = 1;
-				end
 			end
 		end
 	end

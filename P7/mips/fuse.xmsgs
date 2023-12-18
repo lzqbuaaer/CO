@@ -5,16 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P7/mips/cpu.v" Line 218: Port <arg fmt="%s" index="1">ALUOp</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P7/mips/cpu.v" Line 219: Port <arg fmt="%s" index="1">ALUOp</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P7/mips/cpu.v" Line 228: Port <arg fmt="%s" index="1">NPCOp</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P7/mips/cpu.v" Line 229: Port <arg fmt="%s" index="1">NPCOp</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P7/mips/cpu.v" Line 238: Port <arg fmt="%s" index="1">NPCOp</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P7/mips/cpu.v" Line 239: Port <arg fmt="%s" index="1">NPCOp</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P7/mips/cpu.v" Line 248: Port <arg fmt="%s" index="1">NPCOp</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/lzq123/co/P7/mips/cpu.v" Line 249: Port <arg fmt="%s" index="1">NPCOp</arg> is not connected to this instance
 </msg>
 
 </messages>

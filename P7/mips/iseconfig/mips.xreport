@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-11-30T19:41:40</DateModified>
-  <ModuleName>cpu</ModuleName>
+  <DateModified>2023-12-18T17:39:00</DateModified>
+  <ModuleName>mips</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>D:/lzq123/co/P7/mips/iseconfig/mips.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/lzq123/co/P7/mips</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>D:/lzq123/co/P7/mips\</ImplementationReportsDirectory>
   <DateInitialized>2023-11-30T19:41:40</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
